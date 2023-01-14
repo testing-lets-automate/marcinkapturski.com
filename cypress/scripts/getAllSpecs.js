@@ -3,7 +3,7 @@ const path = require("path");
 const getAllFiles = require("./getAllFiles");
 
 const args = process.argv;
-const modulePath = args[2]; // Module path
+const modulePath = args[2]; // (e2e folder) GHA: node getAllSpecs ../e2e/
 
 const absoluteModulePath = path.join(__dirname, modulePath);
 

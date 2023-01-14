@@ -6,7 +6,7 @@ Feature: Navigation links are visible and performing actions
 
   @regression
   Scenario Outline: Navigation item "<navigation_item>" scrolled to its assigned section
-    * I click on the navigation link "<navigation_item>"
+    When I click on the navigation link "<navigation_item>"
     Then The page is on the position "<position>"
 
     Examples:

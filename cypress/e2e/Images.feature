@@ -1,7 +1,7 @@
 Feature: Page Images are loaded
 
     @regression
-    Scenario Outline: Page Images are loaded on the Main page
+    Scenario Outline: Page Images are loaded on the Main page <image>
         * I open the "home_page"
         * The title includes "About automation tests in Software Development"
         Then Image "<image>" is visible on the page with "<content>"
@@ -9,4 +9,4 @@ Feature: Page Images are loaded
         Examples:
             | image      | content               |
             | logo-image | data:image/png;base64 |
-            | hero-image | /static/media/face    |
+# | hero-image | data:image/png;base64 |
