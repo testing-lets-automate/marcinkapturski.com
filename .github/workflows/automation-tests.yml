@@ -1,0 +1,141 @@
+name: Run Automation Tests
+
+on:
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      environment:
+        type: choice
+        description: "Environment: localhost / marcinkapturski.com"
+        required: true
+        options:
+          - localhost
+          - marcinkapturski.com
+        default: "localhost"
+
+jobs:
+  list-specs:
+    name: List of Feature files
+    runs-on: ubuntu-latest
+    outputs:
+      specs: ${{ steps.list-of-feature-files.outputs.list }}
+    steps:
+      - name: Checkout the repository
+        if: always()
+        uses: actions/checkout@v3
+
+      - id: list-of-feature-files
+        if: always()
+        run: |
+          export JSON=$(node ${{ github.workspace }}/cypress/scripts/getAllSpecs ../e2e/)
+          echo $JSON
+          echo "::set-output name=list::$JSON"
+
+  build-packages:
+    name: Install & build packages
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: ">=16.0.0"
+
+      - name: Install all packages
+        run: npm install
+
+      - name: Build application
+        if: ${{ github.event.inputs.environment == 'localhost' || github.event_name == 'pull_request' }}
+        run: npm run build-localhost
+
+      - name: Save build folder
+        if: ${{ github.event.inputs.environment == 'localhost' || github.event_name == 'pull_request' }}
+        uses: actions/upload-artifact@v3
+        with:
+          name: build
+          if-no-files-found: error
+          path: build
+
+  run-tests:
+    name: Run tests
+    needs: [list-specs, build-packages]
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        spec: ${{ fromJson( needs.list-specs.outputs.specs ) }}
+    env:
+      DEFAULT_ENV: localhost
+      ENV_TYPE: ${{ inputs.environment }}
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: ">=16.0.0"
+
+      - name: Download the build folders
+        if: ${{ github.event.inputs.environment == 'localhost' || github.event_name == 'pull_request' }}
+        uses: actions/download-artifact@v3
+        with:
+          name: build
+          path: build
+
+      - name: Install Serve
+        if: ${{ github.event.inputs.environment == 'localhost' || github.event_name == 'pull_request' }}
+        run: npm install --global serve
+
+      - name: Run application on localhost
+        if: ${{ github.event.inputs.environment == 'localhost' || github.event_name == 'pull_request' }}
+        run: serve -s ${{ github.workspace }}/build &
+
+      - name: Run Tests on Pull Request
+        if: ${{ github.event_name == 'pull_request' }}
+        uses: cypress-io/github-action@v4
+        with:
+          install: true
+          wait-on: "http://localhost:3000"
+          wait-on-timeout: 120
+          browser: chrome
+          spec: cypress/${{ matrix.spec }}
+          config-file: /${{ github.workspace }}/cypress/configs/cypress.${{ env.DEFAULT_ENV }}.config.js
+
+      - name: Run Tests on localhost
+        if: ${{ github.event.inputs.environment == 'localhost' }}
+        uses: cypress-io/github-action@v4
+        with:
+          install: true
+          wait-on: "http://localhost:3000"
+          wait-on-timeout: 120
+          browser: chrome
+          spec: cypress/${{ matrix.spec }}
+          config-file: /${{ github.workspace }}/cypress/configs/cypress.${{ env.ENV_TYPE }}.config.js
+
+      - name: Run Tests on marcinkapturski.com
+        if: ${{ github.event.inputs.environment != 'localhost' && github.event_name != 'pull_request' }}
+        uses: cypress-io/github-action@v4
+        with:
+          install: true
+          browser: chrome
+          spec: cypress/${{ matrix.spec }}
+          config-file: /${{ github.workspace }}/cypress/configs/cypress.${{ env.ENV_TYPE }}.config.js
+
+      - name: Cypress screenshots
+        uses: actions/upload-artifact@v1
+        if: failure()
+        with:
+          name: cypress-screenshots
+          path: ${{ github.workspace }}/cypress/screenshots
+
+      - name: Cypress videos
+        uses: actions/upload-artifact@v1
+        if: always()
+        with:
+          name: cypress-videos
+          path: ${{ github.workspace }}/cypress/videos
