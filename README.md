@@ -38,13 +38,15 @@ yarn
 # run cypress tests
 yarn cy:run
 ```
+
 Test results will be displayed like on this example
+
 
 ![Screen Shot 2023-01-14 at 2 05 21 PM](https://user-images.githubusercontent.com/41780000/212472955-f13dd7d9-5564-4086-bcf2-5b4a7edb2e39.png)
 
 
   
-  ## Open Tests in service window
+  ## Run Tests in Cypress window
   
 ```bash
 # install necessary packages
@@ -53,7 +55,9 @@ yarn
 # run cypress service window
 yarn cy:open
 ```
+
 Here is example of Cypress service window with example Cucumber Feature files
+
 ![Screen Shot 2023-01-14 at 2 10 29 PM](https://user-images.githubusercontent.com/41780000/212473176-415976ab-d956-4218-a3b0-7b00117086ad.png)
 </p>
 </details>
