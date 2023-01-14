@@ -45,11 +45,11 @@ jobs:
           node-version: ">=16.0.0"
 
       - name: Install all packages
-        run: npm install
+        run: yarn
 
       - name: Build application
         if: ${{ github.event.inputs.environment == 'localhost' || github.event_name == 'pull_request' }}
-        run: npm run build-localhost
+        run: yarn build-localhost
 
       - name: Save build folder
         if: ${{ github.event.inputs.environment == 'localhost' || github.event_name == 'pull_request' }}
@@ -89,7 +89,7 @@ jobs:
 
       - name: Install Serve
         if: ${{ github.event.inputs.environment == 'localhost' || github.event_name == 'pull_request' }}
-        run: npm install --global serve
+        run: yarn add --global serve
 
       - name: Run application on localhost
         if: ${{ github.event.inputs.environment == 'localhost' || github.event_name == 'pull_request' }}
