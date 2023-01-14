@@ -1,8 +1,16 @@
 ## Overview
 
-This is my personal website, blog and part of my portfolio. Written using JavaScript, built with React, tested by Cypress automation, by run it on GitHub Actions
+This is my personal website, blog and part of my portfolio.
+Written using JavaScript, built with React, tested by Cypress automation.
 
-## Run Website Locally
+## Table of Contents
+
+<details><summary>Click here to read about: Website details</summary>
+<p>
+
+  ## Website
+
+  ##Run Website Locally
 
 ```bash
 # install necessary packages
@@ -13,27 +21,51 @@ yarn start
 ```
 
 Open http://localhost:3000 with your browser to see the result
+</p>
+</details>
+<details><summary>Click here to read about: UI Cypress tests</summary>
+<p>
 
-## Run Cypress tests Locally
+  ## UI Cypress tests
+
+  
+  ## Run Tests in console
 
 ```bash
 # install necessary packages
 yarn
 
-# run cypress modal window
-yarn cy:open
-
-# or run cypress tests in terminal
+# run cypress tests
 yarn cy:run
 ```
+Test results will be displayed like on this example
 
-## Example of Cypress modal window with Cucumber Feature files
+![Screen Shot 2023-01-14 at 2 05 21 PM](https://user-images.githubusercontent.com/41780000/212472955-f13dd7d9-5564-4086-bcf2-5b4a7edb2e39.png)
 
-# BDD(Cucumber) tests
 
-Under path: `/cypress/e2e` are stored all automation tests written in BDD format
+  
+  ## Open Tests in service window
+  
+```bash
+# install necessary packages
+yarn
 
-## Example
+# run cypress service window
+yarn cy:open
+```
+Here is example of Cypress service window with example Cucumber Feature files
+![Screen Shot 2023-01-14 at 2 10 29 PM](https://user-images.githubusercontent.com/41780000/212473176-415976ab-d956-4218-a3b0-7b00117086ad.png)
+</p>
+</details>
+
+<details><summary>Click here to read about: Tests structure and Gherkin language</summary>
+<p>
+
+  ## Tests structure and Gherkin language
+
+Under path: `/cypress/e2e` are all automation tests written in Gherkin language
+
+Example:
 
 ```gherkin
 Feature: Navigation links are visible and performing actions
@@ -44,7 +76,7 @@ Feature: Navigation links are visible and performing actions
 
   @regression
   Scenario Outline: Navigation item "<navigation_item>" scrolled to its assigned section
-    * I click on the navigation link "<navigation_item>"
+    When I click on the navigation link "<navigation_item>"
     Then The page is on the position "<position>"
 
     Examples:
@@ -54,3 +86,7 @@ Feature: Navigation links are visible and performing actions
       | Cooperation     | 11       |
       | Contact         | 16       |
 ```
+
+
+</p>
+</details>
