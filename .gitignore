@@ -9,8 +9,9 @@
 /coverage
 *.*.mp4
 *.mp4
-*.png
 *.lt
+/cypress/screenshots/*
+/cypress/videos/*
 .lambdatest/v3/LT
 
 # production
