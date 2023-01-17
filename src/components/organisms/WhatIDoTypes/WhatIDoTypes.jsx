@@ -24,11 +24,6 @@ const WhatIDoTypes = () => {
             strategies performed manually and automatically.
           </blockquote>
           <div className="spacer-single"></div>
-          <blockquote className="q-big">
-            My over 16 years of experience in various companies across diverse
-            business areas, cultures, geographies have prepared me to be an
-            effective team player.
-          </blockquote>
           <div className="spacer-single"></div>
         </div>
         <div className="row">
@@ -44,9 +39,26 @@ const WhatIDoTypes = () => {
               <div className="d-inner">
                 <i className="icon_genius id-color-2"></i>
                 <div className="text">
-                  <h3>
-                    WEB & API automation tests run on different environments
-                  </h3>
+                  <h3>Web & API automation</h3>I am writing WEB & API tests,
+                  mostly with{" "}
+                  <a
+                    className="link_black"
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://github.com/marcinkapturski/marcinkapturski.com/tree/master/cypress"
+                  >
+                    Cypress tool
+                  </a>{" "}
+                  and support of{" "}
+                  <a
+                    className="link_black"
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://github.com/marcinkapturski/marcinkapturski.com/actions/workflows/automation-tests.yml"
+                  >
+                    GitHub Action workflows
+                  </a>{" "}
+                  by runing them in different ways and on many environments
                 </div>
               </div>
             </div>
@@ -63,9 +75,10 @@ const WhatIDoTypes = () => {
               <div className="d-inner">
                 <i className="icon_tools id-color-2"></i>
                 <div className="text">
-                  <h3>
-                    Mobile automation tests with Appium & Wdio iOS & Android
-                  </h3>
+                  <h3>Mobile automation tests</h3>
+                  Changes in software development inspired me to start
+                  supporting mobile automation with Appium & Wdio for iOS &
+                  Android (Browserstack, Lambdatest)
                 </div>
               </div>
             </div>
@@ -86,6 +99,16 @@ const WhatIDoTypes = () => {
                     Developing test strategies on all levels of Software
                     Development
                   </h3>
+                  Well-written tests require proper planning I like to use for{" "}
+                  <a
+                    className="link_black"
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://miro.com/app/board/uXjVPxsPXv4=/"
+                  >
+                    Miro board
+                  </a>{" "}
+                  and Jira or TFS for transparency and tracking
                 </div>
               </div>
             </div>

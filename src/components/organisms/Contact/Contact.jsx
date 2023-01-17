@@ -100,10 +100,7 @@ const Contact = () => {
                     </div>
                     <div className="text-center">
                       <div className="field-set">
-                        <Textarea
-                          placeholder="In which technology? What are the programming languages used in the frontend and backend of your projects?
-"
-                        />
+                        <Textarea placeholder="In which technology? What are the programming languages used in the frontend and backend of your projects?" />
                       </div>
                       <Text id="success" text="Your message has been sent..." />
                       <Text id="success" text="Sending failed..." />

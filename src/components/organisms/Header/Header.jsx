@@ -45,7 +45,7 @@ const Header = function () {
               <ul className="navbar-nav mr-auto w-100 justify-content-end clearfix">
                 <NavigationItemMobile url="hero-area" name="Start" />
                 <NavigationItemMobile url="whatido" name="What I Do" />
-                <NavigationItemMobile url="workwithme" name="About me" />
+                <NavigationItemMobile url="workwithme" name="Work with me" />
                 <NavigationItemMobile url="contact" name="Contact" />
               </ul>
             </div>
