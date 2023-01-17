@@ -1,5 +1,8 @@
 import React from "react";
 import Heading from "components/atoms/Heading/Heading";
+import webautomation from "../../../assets/web-automation.png";
+import mobileautomation from "../../../assets/mobile-automation.png";
+import teststrategies from "../../../assets/test-strategies.png";
 import AOS from "aos";
 AOS.init();
 
@@ -37,7 +40,14 @@ const WhatIDoTypes = () => {
           >
             <div className="de_3d-box">
               <div className="d-inner">
-                <i className="icon_genius id-color-2"></i>
+                <div>
+                  <img
+                    src={webautomation}
+                    alt={"web automation"}
+                    data-testid="web-automation"
+                    className="what-i-do-image"
+                  />
+                </div>
                 <div className="text">
                   <h3>Web & API automation</h3>I am writing WEB & API tests,
                   mostly with{" "}
@@ -73,7 +83,14 @@ const WhatIDoTypes = () => {
           >
             <div className="de_3d-box">
               <div className="d-inner">
-                <i className="icon_tools id-color-2"></i>
+                <div>
+                  <img
+                    src={mobileautomation}
+                    alt={"mobile automation"}
+                    data-testid="mobile-automation"
+                    className="what-i-do-image"
+                  />
+                </div>
                 <div className="text">
                   <h3>Mobile automation tests</h3>
                   Changes in software development inspired me to start
@@ -93,22 +110,27 @@ const WhatIDoTypes = () => {
           >
             <div className="de_3d-box">
               <div className="d-inner">
-                <i className="icon_camera_alt id-color-2"></i>
+                <div>
+                  <img
+                    src={teststrategies}
+                    alt={"test strategies"}
+                    data-testid="test-strategies"
+                    className="what-i-do-image"
+                  />
+                </div>
                 <div className="text">
-                  <h3>
-                    Developing test strategies on all levels of Software
-                    Development
-                  </h3>
-                  Well-written tests require proper planning I like to use for{" "}
+                  <h3>Developing test strategies</h3>
+                  Well-written tests require proper planning <br />I like to use
+                  Mind Map from{" "}
                   <a
                     className="link_black"
                     target="_blank"
                     rel="noreferrer"
                     href="https://miro.com/app/board/uXjVPxsPXv4=/"
                   >
-                    Miro board
+                    Miro
                   </a>{" "}
-                  and Jira or TFS for transparency and tracking
+                  for visibility, Jira or TFS for transparency and task tracking
                 </div>
               </div>
             </div>

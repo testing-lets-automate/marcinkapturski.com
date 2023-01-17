@@ -5,7 +5,7 @@ import background from "../../../assets/background.jpg";
 import AOS from "aos";
 AOS.init();
 
-const Quote = () => {
+const WorkWithMe = () => {
   return (
     <section id="workwithme" className="pb-0">
       <div className="section bg-top bg-bottom py-0">
@@ -28,9 +28,6 @@ const Quote = () => {
                     software in order to meet the highest quality standards,
                     work with me.
                   </blockquote>
-                  <div className="spacer-double"></div>
-                  <div className="spacer-double"></div>
-                  <div className="spacer-single"></div>
                 </div>
               </div>
             </div>
@@ -41,4 +38,4 @@ const Quote = () => {
   );
 };
 
-export default Quote;
+export default WorkWithMe;
