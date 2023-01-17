@@ -10,6 +10,7 @@
 *.*.mp4
 *.mp4
 *.lt
+.dev
 /cypress/screenshots/*
 /cypress/videos/*
 .lambdatest/v3/LT

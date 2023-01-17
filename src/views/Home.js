@@ -1,13 +1,13 @@
 import Preloader from "components/organisms/Preloader/Preloader";
 import Header from "components/organisms/Header/Header";
 import HeroArea from "components/organisms/HeroArea/HeroArea";
-import ContentArea from "components/organisms/ContentArea/ContentArea";
+import StatisticsBar from "components/organisms/StatisticsBar/StatisticsBar";
 import Quote from "components/organisms/Quote/Quote";
-import Cooperation from "components/organisms/Cooperation/Cooperation";
 import Contact from "components/organisms/Contact/Contact";
 import Footer from "components/organisms/Footer/Footer";
 import SocialIcons from "components/atoms/SocialIcons/SocialIcons";
 import ScrollToTop from "components/organisms/ScrollToTop/ScrollToTop";
+import WhatIDoTypes from "components/organisms/WhatIDoTypes/WhatIDoTypes";
 
 function HomePage() {
   return (
@@ -16,9 +16,9 @@ function HomePage() {
         <Preloader />
         <Header />
         <HeroArea />
-        <ContentArea />
+        <WhatIDoTypes />
+        <StatisticsBar />
         <Quote />
-        <Cooperation />
         <Contact />
         <Footer />
         <SocialIcons text="GitHub" />
