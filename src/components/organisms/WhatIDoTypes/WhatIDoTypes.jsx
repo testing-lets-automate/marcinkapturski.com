@@ -64,7 +64,7 @@ const WhatIDoTypes = () => {
                     className="link_black"
                     target="_blank"
                     rel="noreferrer"
-                    href="https://github.com/marcinkapturski/marcinkapturski.com/actions/workflows/automation-tests.yml"
+                    href="https://github.com/marcinkapturski/github-action-workflows"
                   >
                     GitHub Action workflows
                   </a>{" "}
@@ -94,8 +94,16 @@ const WhatIDoTypes = () => {
                 <div className="text">
                   <h3>Mobile automation tests</h3>
                   Changes in software development inspired me to start
-                  supporting mobile automation with Appium & Wdio for iOS &
-                  Android (Browserstack, Lambdatest)
+                  supporting mobile automation with{" "}
+                  <a
+                    className="link_black"
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://github.com/marcinkapturski/mobile-web-automation"
+                  >
+                    Appium & Wdio for iOS & Android
+                  </a>{" "}
+                  devices (Browserstack, Lambdatest)
                 </div>
               </div>
             </div>
