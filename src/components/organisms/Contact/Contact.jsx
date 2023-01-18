@@ -106,7 +106,6 @@ const Contact = () => {
                       <Text id="success" text="Sending failed..." />
 
                       <ButtonSubmit
-                        data-sitekey={process.env.GRECAPTCHA}
                         type={"submit"}
                         id="send_message"
                         className="btn-main"
@@ -128,7 +127,7 @@ const Contact = () => {
                     <div className="wm-1"></div>
                     <h6>My e-mail</h6>
                     <p>
-                      <a href="/">contact @ marcinkapturski.com</a>
+                      <a href="/">marcinkapturski123@gmail.com</a>
                     </p>
                   </div>
                   <div
