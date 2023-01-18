@@ -26,7 +26,9 @@ const WorkWithMe = () => {
                   <blockquote className="q-big">
                     If you’re looking for a freelancer to help you test your
                     software in order to meet the highest quality standards,
-                    work with me.
+                    work with me. <br />
+                    <br />
+                    Fill out the form below or contact me directly
                   </blockquote>
                 </div>
               </div>
