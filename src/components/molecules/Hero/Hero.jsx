@@ -21,7 +21,7 @@ const Hero = () => {
           <div className="col-md-6">
             <div className="spacer-20"></div>
             <div className="h1_big">
-              I'm developing automation tests and tests strategies
+              Tests automation &amp; tests strategies
             </div>
             <div
               className="h1_big"
@@ -40,19 +40,17 @@ const Hero = () => {
               data-aos-once="true"
             >
               <li>
-                <span>Cypress WEB & API automation</span>
+                <span>WEB & API automation</span>
               </li>
               <li>
-                <span>Appium automation for Android & iOS mobile devices</span>
+                <span>Mobile automation for Android & iOS mobile devices</span>
               </li>
             </ul>
             <button className="btn-main mt-3">
               <Link to="resume">
                 <Typed
                   strings={["How to start cooperation with me"]}
-                  typeSpeed={60}
-                  backSpeed={50}
-                  loop
+                  typeSpeed={30}
                   className="hero-button"
                 />
               </Link>

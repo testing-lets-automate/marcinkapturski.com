@@ -7,12 +7,12 @@ const Footer = () => {
         <div className="container">
           <div className="row">
             <div className="col-md-6">
-              <span className="copy">
+              <span className="footer-text">
                 &copy; Copyright 2023 - Marcin Kapturski
               </span>
             </div>
             <div className="col-md-6">
-              <p>
+              <p className="footer-text">
                 This website was built with <b>React</b>, tested by{" "}
                 <b> Cypress,</b> described by Feature files
                 <a
