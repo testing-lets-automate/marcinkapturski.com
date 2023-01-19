@@ -9,7 +9,7 @@ const HeroArea = () => {
       <section id="hero-area" className="bg-bottom py-0">
         <Parallax bgImage={background} strength={300}>
           <Hero />
-          <LinkSmooth to="about" />
+          <LinkSmooth to="whatido" />
         </Parallax>
       </section>
     </>
