@@ -47,7 +47,7 @@ const Hero = () => {
               </li>
             </ul>
             <button className="btn-main mt-3">
-              <Link to="resume">
+              <Link to="workwithme">
                 <Typed
                   strings={["How to start cooperation with me"]}
                   typeSpeed={30}

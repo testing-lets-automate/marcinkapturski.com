@@ -1,52 +1,52 @@
-export const blogAnimationSettings = {
+export const iconsAnimationSettings = {
   infinite: false,
   speed: 500,
-  slidesToShow: 3,
+  slidesToShow: 6,
   slidesToScroll: 1,
   initialSlide: 0,
-  adaptiveHeight: 300,
+  adaptiveHeight: 100,
   arrows: false,
   dots: true,
   responsive: [
     {
-      breakpoint: 1900,
+      breakpoint: 500,
       settings: {
         slidesToShow: 3,
         slidesToScroll: 1,
-        dots: true
-      }
+        dots: true,
+      },
     },
     {
-      breakpoint: 1600,
+      breakpoint: 400,
       settings: {
         slidesToShow: 3,
         slidesToScroll: 1,
-        dots: true
-      }
+        dots: true,
+      },
     },
     {
-      breakpoint: 1024,
+      breakpoint: 300,
       settings: {
         slidesToShow: 2,
         slidesToScroll: 1,
-        dots: true
-      }
+        dots: true,
+      },
     },
     {
-      breakpoint: 600,
+      breakpoint: 200,
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,
-        initialSlide: 2
-      }
+        initialSlide: 2,
+      },
     },
     {
-      breakpoint: 480,
+      breakpoint: 100,
       settings: {
-        slidesToShow: 1,
+        slidesToShow: 6,
         slidesToScroll: 1,
-        dots: true
-      }
-    }
-  ]
+        dots: true,
+      },
+    },
+  ],
 };
