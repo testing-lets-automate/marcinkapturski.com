@@ -1,67 +1,11 @@
-name: Run Automation Tests
+name: Run specs
 
 on:
-  pull_request:
-  workflow_dispatch:
-    inputs:
-      environment:
-        type: choice
-        description: "Environment: localhost / marcinkapturski.com"
-        required: true
-        options:
-          - localhost
-          - marcinkapturski.com
-        default: "localhost"
-
-jobs:
-  list-specs:
-    name: List of Feature files
-    runs-on: ubuntu-latest
-    outputs:
-      specs: ${{ steps.list-of-feature-files.outputs.list }}
-    steps:
-      - name: Checkout the repository
-        if: always()
-        uses: actions/checkout@v3
-
-      - id: list-of-feature-files
-        if: always()
-        run: |
-          export JSON=$(node ${{ github.workspace }}/cypress/scripts/getAllSpecs ../e2e/)
-          echo $JSON
-          echo "::set-output name=list::$JSON"
-
-  build-packages:
-    name: Install & build packages
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-
-      - name: Install Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: ">=16.0.0"
-
-      - name: Install all packages
-        run: yarn
-
-      - name: Build application
-        if: ${{ github.event.inputs.environment == 'localhost' || github.event_name == 'pull_request' }}
-        run: yarn build-localhost
-
-      - name: Save build folder
-        if: ${{ github.event.inputs.environment == 'localhost' || github.event_name == 'pull_request' }}
-        uses: actions/upload-artifact@v3
-        with:
-          name: build
-          if-no-files-found: error
-          path: build
+  workflow_call:
 
   run-tests:
     name: Run tests
-    needs: [list-specs, build-packages]
+    needs: [list-of-specs, build-packages]
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false

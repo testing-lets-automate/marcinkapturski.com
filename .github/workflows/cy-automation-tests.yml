@@ -1,0 +1,31 @@
+name: Run Automation Tests
+
+on:
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      environment:
+        type: choice
+        description: "Environment: localhost / marcinkapturski.com"
+        required: true
+        options:
+          - localhost
+          - marcinkapturski.com
+        default: "localhost"
+
+jobs:
+  list-of-specs:
+    name: List of Feature files
+    uses: "./.github/workflows/cy-list-of-specs.yml@shared"
+
+  build-packages:
+    name: Install & build packages
+    uses: "./.github/workflows/cy-build-packages.yml@shared"
+
+  run-specs:
+    name: Run specs
+    needs: [list-of-specs, build-packages]
+    if: always()
+    uses: "./.github/workflows/cy-run-specs.yml@shared"
+    with:
+      specs: ${{ needs.list-specs.outputs.specs }}

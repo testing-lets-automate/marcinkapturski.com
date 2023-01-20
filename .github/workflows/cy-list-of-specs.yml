@@ -1,0 +1,22 @@
+name: Get list of specs
+
+on:
+  workflow_call:
+
+jobs:
+  list-of-specs:
+    name: List of Feature files
+    runs-on: ubuntu-latest
+    outputs:
+      specs: ${{ steps.list-of-feature-files.outputs.list }}
+    steps:
+      - name: Checkout the repository
+        if: always()
+        uses: actions/checkout@v3
+
+      - id: list-of-feature-files
+        if: always()
+        run: |
+          export JSON=$(node ${{ github.workspace }}/cypress/scripts/getAllSpecs ../e2e/)
+          echo $JSON
+          echo "::set-output name=list::$JSON"
