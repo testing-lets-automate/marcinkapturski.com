@@ -57,8 +57,13 @@ const Hero = () => {
             </button>
           </div>
 
-          <div className="col-md-6" data-testid="hero-image">
-            <Image src={face} className="img-fluid" alt="hero image" />
+          <div className="col-md-6">
+            <Image
+              src={face}
+              className="img-fluid"
+              alt="hero image"
+              datatestid="hero-image"
+            />
           </div>
         </div>
       </div>

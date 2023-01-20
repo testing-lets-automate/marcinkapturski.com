@@ -40,7 +40,7 @@ const Buttons = {
 
 const Images = {
   get: (name) => {
-    return cy.get(`[data-testid=${name}] > div > [data-testid="page-image"]`);
+    return cy.get(`[data-testid=${name}]`);
   },
   clickOn: (name) => {
     Images.get(name).click();

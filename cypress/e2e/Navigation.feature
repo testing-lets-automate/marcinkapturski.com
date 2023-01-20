@@ -12,8 +12,7 @@ Feature: Navigation links are visible and performing actions
     Examples:
       | navigation_item | position |
       | What I Do       | 10       |
-      | About me        | 18       |
-      | Cooperation     | 11       |
+      | Work with me    | 18       |
       | Contact         | 16       |
 
   @regression
@@ -29,6 +28,6 @@ Feature: Navigation links are visible and performing actions
     Then The page position is the top
 
   @regression
-  Scenario: The Hero button is scrolling page to the top Cooperation section
+  Scenario: The Hero button is scrolling page to the Work with me section
     When I click on Hero button
-    Then The page is on the position "11"
+    Then The page is on the position "17"

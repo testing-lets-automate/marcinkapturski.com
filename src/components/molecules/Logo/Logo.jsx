@@ -4,14 +4,13 @@ import logo from "../../../assets/logo.png";
 
 const Logo = () => {
   return (
-    <Link
-      className="navbar-brand"
-      activeClass="active"
-      spy
-      to="hero-area"
-      data-testid="logo-image"
-    >
-      <Image src={logo} className={"img-fluid imggrey"} alt={"Logo"} />
+    <Link className="navbar-brand" activeClass="active" spy to="hero-area">
+      <Image
+        src={logo}
+        className={"img-fluid imggrey"}
+        alt={"Logo"}
+        datatestid="logo-image"
+      />
     </Link>
   );
 };
