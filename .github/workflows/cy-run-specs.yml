@@ -3,6 +3,7 @@ name: Run specs
 on:
   workflow_call:
 
+jobs:
   run-tests:
     name: Run tests
     needs: [list-of-specs, build-packages]
