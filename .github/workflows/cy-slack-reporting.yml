@@ -15,4 +15,4 @@ jobs:
       - name: Slack notification
         if: always()
         run: |
-          echo name=SLACK::$(curl -H "Content-Type: application/json" -X POST --data "{"text":"Hello, from GH actions, example"}" https://hooks.slack.com/services/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| tr -d '"')
+          echo ::set-output name=SLACK::$(curl -H "Content-Type: application/json" -X POST --data "{"text":"Hello, from GH actions, example"}" https://hooks.slack.com/services/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| tr -d '"')
