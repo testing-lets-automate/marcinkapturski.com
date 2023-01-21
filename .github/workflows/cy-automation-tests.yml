@@ -22,10 +22,10 @@ jobs:
     name: Install & build packages
     uses: "./.github/workflows/cy-build-packages.yml"
 
-  # run-specs:
-  #   name: Run specs
-  #   needs: [list-of-specs, build-packages]
-  #   if: always()
-  #   uses: "./.github/workflows/cy-run-specs.yml"
-  #   with:
-  #     specs: ${{ needs.list-specs.outputs.specs }}
+  run-specs:
+    name: Run specs
+    needs: [list-of-specs, build-packages]
+    if: always()
+    uses: "./.github/workflows/cy-run-specs.yml"
+    with:
+      specs: ${{ needs.list-specs.outputs.specs }}
