@@ -19,9 +19,9 @@ jobs:
     name: List of Feature files
     uses: "./.github/workflows/cy-list-of-specs.yml"
 
-  # build-packages:
-  #   name: Install & build packages
-  #   uses: "./.github/workflows/cy-build-packages.yml"
+  build-packages:
+    name: Install & build packages
+    uses: "./.github/workflows/cy-build-packages.yml"
 
   # run-specs:
   #   name: Run specs
