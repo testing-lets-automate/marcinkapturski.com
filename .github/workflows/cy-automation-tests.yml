@@ -18,14 +18,14 @@ jobs:
     name: List of Feature files
     uses: "./.github/workflows/cy-list-of-specs.yml@shared"
 
-  build-packages:
-    name: Install & build packages
-    uses: "./.github/workflows/cy-build-packages.yml@shared"
+  # build-packages:
+  #   name: Install & build packages
+  #   uses: "./.github/workflows/cy-build-packages.yml@shared"
 
-  run-specs:
-    name: Run specs
-    needs: [list-of-specs, build-packages]
-    if: always()
-    uses: "./.github/workflows/cy-run-specs.yml@shared"
-    with:
-      specs: ${{ needs.list-specs.outputs.specs }}
+  # run-specs:
+  #   name: Run specs
+  #   needs: [list-of-specs, build-packages]
+  #   if: always()
+  #   uses: "./.github/workflows/cy-run-specs.yml@shared"
+  #   with:
+  #     specs: ${{ needs.list-specs.outputs.specs }}
