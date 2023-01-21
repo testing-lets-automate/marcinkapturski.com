@@ -88,3 +88,8 @@ jobs:
         with:
           name: cypress-videos
           path: ${{ github.workspace }}/cypress/videos
+
+      - name: Clean up build folder
+        uses: geekyeggo/delete-artifact@v2
+        with:
+          name: build
