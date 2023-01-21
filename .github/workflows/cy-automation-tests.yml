@@ -34,5 +34,5 @@ jobs:
 
   report:
     name: Report
-    needs: run-specs
+    # needs: run-specs
     uses: "./.github/workflows/cy-slack-reporting.yml"
