@@ -15,4 +15,4 @@ jobs:
       - name: Slack notification
         if: always()
         run: |
-          $(curl -X POST -H 'Content-type: application/json' --data '{"text":"Hello, from GH actions, example"}' https://hooks.slack.com/services/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)
+          $(curl -X POST -H 'Content-type: application/json' --data '{"text":"Hello, from GH actions, example"}' https://hooks.slack.com/services/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| tr -d '"')
