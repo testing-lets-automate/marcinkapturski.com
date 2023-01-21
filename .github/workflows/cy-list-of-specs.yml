@@ -4,7 +4,7 @@ on:
   workflow_call:
     outputs:
       specs:
-        description: "List of specs to run"
+        description: "List of specs"
         value: ${{ jobs.list-of-specs.outputs.specs }}
 
 jobs:
