@@ -15,4 +15,5 @@ jobs:
       - name: Slack notification
         if: always()
         run: |
-          echo ::set-output name=SLACK::$(curl -H "Content-Type: application/json" -X POST --data "{\"text\":\"Hello, from GH actions, example\"}" https://hooks.slack.com/services/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)
+          export SCRIPT_PATH=${{ github.workspace }}/cypress/cypress-tests/slack/message.js
+          yarn node $SCRIPT_PATH
