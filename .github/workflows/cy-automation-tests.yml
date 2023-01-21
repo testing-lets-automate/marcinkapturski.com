@@ -27,5 +27,5 @@ jobs:
     needs: [list-of-specs, build-packages]
     if: always()
     uses: "./.github/workflows/cy-run-specs.yml"
-  #   with:
-  #     specs: ${{ needs.list-of-specs.outputs.specs }}
+    with:
+      specs: ${{ needs.list-of-specs.outputs.specs }}
