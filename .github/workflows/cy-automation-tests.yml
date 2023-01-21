@@ -1,6 +1,8 @@
 name: Run Automation Tests
 
 on:
+  schedule:
+    - cron: "0 * * * *"
   pull_request:
   workflow_dispatch:
     inputs:
