@@ -1,7 +1,6 @@
 name: Run Automation Tests with Shared workflows
 
 on:
-  push:
   pull_request:
   workflow_dispatch:
     inputs:
