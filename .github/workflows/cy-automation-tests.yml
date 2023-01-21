@@ -15,11 +15,11 @@ on:
 
 jobs:
   list-specs:
-    name: List of Feature files
-    uses: "./.github/workflows/cy-list-specs.yml"
+    name: Feature files
+    uses: "./.github/workflows/cy-list-of-specs.yml"
 
   build-packages:
-    name: Install & build packages
+    name: Install & build
     uses: "./.github/workflows/cy-build-packages.yml"
 
   run-specs:
