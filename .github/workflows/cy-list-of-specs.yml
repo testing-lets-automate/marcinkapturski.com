@@ -8,13 +8,13 @@ jobs:
     name: List of Feature files
     runs-on: ubuntu-latest
     outputs:
-      specs: ${{ steps.list-of-feature-files.outputs.list }}
+      specs: ${{ steps.list-of-specs.outputs.list }}
     steps:
       - name: Checkout the repository
         if: always()
         uses: actions/checkout@v3
 
-      - id: list-of-feature-files
+      - id: list-of-specs
         if: always()
         run: |
           export JSON=$(node ${{ github.workspace }}/cypress/scripts/getAllSpecs ../e2e/)

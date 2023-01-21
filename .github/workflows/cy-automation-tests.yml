@@ -28,4 +28,4 @@ jobs:
     if: always()
     uses: "./.github/workflows/cy-run-specs.yml"
     with:
-      specs: ${{ needs.list-specs.outputs.specs }}
+      specs: ${{ needs.list-of-specs.outputs.specs }}
