@@ -17,4 +17,4 @@ jobs:
       - name: Slack notification
         if: always()
         run: |
-          $curl -X POST -H 'Content-type: application/json' --data '{"text":"Hello, World!"}' https://hooks.slack.com/services/${{ secrets.SLACK_WEBHOOK }})
+          $(curl -X POST -H 'Content-type: application/json' --data '{"text":"Hello, World!"}' https://hooks.slack.com/services/${{ secrets.SLACK_WEBHOOK }})
