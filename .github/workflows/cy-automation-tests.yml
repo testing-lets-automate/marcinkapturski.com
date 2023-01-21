@@ -17,15 +17,15 @@ on:
 
 jobs:
   list-specs:
-    name: Feature files
+    name: Files
     uses: "./.github/workflows/cy-list-of-specs.yml"
 
   build-packages:
-    name: Install & build
+    name: Build
     uses: "./.github/workflows/cy-build-packages.yml"
 
   run-specs:
-    name: Run specs
+    name: Specs
     needs: [list-specs, build-packages]
     if: always()
     uses: "./.github/workflows/cy-run-specs.yml"

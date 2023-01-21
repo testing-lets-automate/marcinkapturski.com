@@ -44,8 +44,8 @@ jobs:
         if: ${{ github.event.inputs.environment == 'localhost' || github.event_name == 'pull_request' }}
         run: serve -s ${{ github.workspace }}/build &
 
-      - name: Run Tests on Pull Request/Schedule
-        if: ${{ github.event_name == 'pull_request' || github.event_name == 'schedule' }}
+      - name: Run Tests on Pull Request
+        if: ${{ github.event_name == 'pull_request' }}
         uses: cypress-io/github-action@v4
         with:
           install: true
