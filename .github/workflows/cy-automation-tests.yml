@@ -1,4 +1,4 @@
-name: Run Automation Tests with Shared workflows
+name: Run Automation Tests
 
 on:
   pull_request:
