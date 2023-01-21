@@ -12,6 +12,11 @@ jobs:
       - name: Checkout the repository
         uses: actions/checkout@v2
 
+      - name: Install isomorphic-fetch
+        if: always()
+        run: |
+          yarn add isomorphic-fetch
+
       - name: Slack notification
         if: always()
         run: |
