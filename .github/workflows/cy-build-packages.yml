@@ -3,6 +3,7 @@ name: Build & Install packages
 on:
   workflow_call:
 
+jobs:
   build-packages:
     name: Install & build packages
     runs-on: ubuntu-latest
