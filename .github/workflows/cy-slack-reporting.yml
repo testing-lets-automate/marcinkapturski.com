@@ -8,8 +8,6 @@ jobs:
     name: Report results on Slack
     runs-on: ubuntu-latest
     if: always()
-    env:
-      SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
     steps:
       - name: Checkout the repository
         uses: actions/checkout@v2
@@ -17,4 +15,4 @@ jobs:
       - name: Slack notification
         if: always()
         run: |
-          $(curl -X POST -H 'Content-type: application/json' --data '{"text":"Hello, World!"}' https://hooks.slack.com/services/${{ secrets.SLACK_WEBHOOK }})
+          $(curl -X POST -H 'Content-type: application/json' --data '{"text":"Hello, from GH actions, example"}' https://hooks.slack.com/services/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)
