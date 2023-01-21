@@ -1,30 +1,24 @@
-name: Get list of specs
+name: Create list of Feature files
 
 on:
   workflow_call:
     outputs:
       specs:
         description: "List of specs to run"
-        value: ${{ jobs.list-specs.outputs.specs }}
+        value: ${{ jobs.list-of-specs.outputs.specs }}
 
 jobs:
-  list-specs:
+  list-of-specs:
     name: List of Feature files
     runs-on: ubuntu-latest
     outputs:
-      specs: ${{ steps.list-specs-for-module.outputs.list }}
+      specs: ${{ steps.list.outputs.list }}
     steps:
       - name: Checkout the repository
         uses: actions/checkout@v2
 
-      # - name: Setup Node.js and Yarn
-      #   uses: ./.github/actions/setup-node-yarn
-      #   with:
-      #     install-yarn: "false"
-      #     restore-cache: "false"
-
-      - name: Get list of specs
-        id: list-specs-for-module
+      - name: Run node script
+        id: list
         if: always()
         run: |
           export JSON=$(node ${{ github.workspace }}/cypress/scripts/getAllSpecs ../e2e/)
