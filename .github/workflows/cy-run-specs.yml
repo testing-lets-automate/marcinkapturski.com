@@ -2,6 +2,11 @@ name: Run specs
 
 on:
   workflow_call:
+    inputs:
+      specs:
+        description: "Stringified JSON object listing specs to run"
+        required: true
+        type: string
 
 jobs:
   run-tests:
@@ -10,7 +15,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        spec: ${{ fromJson( needs.list-specs.outputs.specs ) }}
+        spec: ${{ fromJson( inputs.specs ) }}
     env:
       DEFAULT_ENV: localhost
       ENV_TYPE: ${{ inputs.environment }}

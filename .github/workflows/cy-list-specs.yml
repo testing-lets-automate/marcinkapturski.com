@@ -5,21 +5,26 @@ on:
     outputs:
       specs:
         description: "List of specs to run"
-        value: ${{ jobs.list-of-specs.outputs.specs }}
+        value: ${{ jobs.list-specs.outputs.specs }}
 
 jobs:
-  list-of-specs:
+  list-specs:
     name: List of Feature files
     runs-on: ubuntu-latest
     outputs:
-      specs: ${{ steps.spec-list.outputs.list }}
+      specs: ${{ steps.list-specs-for-module.outputs.list }}
     steps:
       - name: Checkout the repository
-        if: always()
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
+
+      # - name: Setup Node.js and Yarn
+      #   uses: ./.github/actions/setup-node-yarn
+      #   with:
+      #     install-yarn: "false"
+      #     restore-cache: "false"
 
       - name: Get list of specs
-        id: spec-list
+        id: list-specs-for-module
         if: always()
         run: |
           export JSON=$(node ${{ github.workspace }}/cypress/scripts/getAllSpecs ../e2e/)

@@ -14,9 +14,9 @@ on:
         default: "localhost"
 
 jobs:
-  list-of-specs:
+  list-specs:
     name: List of Feature files
-    uses: "./.github/workflows/cy-list-of-specs.yml"
+    uses: "./.github/workflows/cy-list-specs.yml"
 
   build-packages:
     name: Install & build packages
@@ -24,8 +24,8 @@ jobs:
 
   run-specs:
     name: Run specs
-    needs: [list-of-specs, build-packages]
+    needs: [list-specs, build-packages]
     if: always()
     uses: "./.github/workflows/cy-run-specs.yml"
-    # with:
-    #   specs: ${{ needs.list-of-specs.outputs.specs }}
+    with:
+      specs: ${{ needs.list-specs.outputs.specs }}
