@@ -1,4 +1,4 @@
-name: Report test results on Slack
+name: Slack notification
 
 on:
   workflow_call:
@@ -12,13 +12,14 @@ jobs:
       - name: Checkout the repository
         uses: actions/checkout@v2
 
-      - name: Install isomorphic-fetch
-        if: always()
-        run: |
-          yarn add isomorphic-fetch
+      # - name: Slack notification
+      #   if: always()
+      #   run: |
+      #     export SCRIPT_PATH=${{ github.workspace }}/cypress/slack/message.js
+      #     yarn node $SCRIPT_PATH
 
       - name: Slack notification
         if: always()
+        shell: bash
         run: |
-          export SCRIPT_PATH=${{ github.workspace }}/cypress/slack/message.js
-          yarn node $SCRIPT_PATH
+          echo ::set-output name=XRAY_TOKEN::$(curl -X POST -H 'Content-type: application/json' --data '{"text":"Hello, World!"}' https://hooks.slack.com/services/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| tr -d '"')
