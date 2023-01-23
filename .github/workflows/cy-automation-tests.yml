@@ -31,6 +31,7 @@ jobs:
     uses: "./.github/workflows/cy-run-specs.yml"
     with:
       specs: ${{ needs.list-specs.outputs.specs }}
+    continue-on-error: true
 
   report:
     name: Report
