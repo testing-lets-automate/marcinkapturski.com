@@ -31,11 +31,11 @@ jobs:
     uses: "./.github/workflows/cy-run-specs.yml"
     with:
       specs: ${{ needs.list-specs.outputs.specs }}
-    continue-on-error: true
 
   report:
     name: Report
     needs: run-specs
+    if: always()
     uses: "./.github/workflows/cy-slack-reporting.yml"
     secrets:
       SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
