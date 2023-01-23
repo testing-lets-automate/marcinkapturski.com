@@ -17,8 +17,6 @@ jobs:
 
       - name: Slack notification
         if: always()
-        secrets:
-          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
         run: |
           export SCRIPT_PATH=${{ github.workspace }}/cypress/slack/message.js
           yarn node $SCRIPT_PATH "${{ secrets.SLACK_WEBHOOK }}"
