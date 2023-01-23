@@ -32,7 +32,7 @@ jobs:
     with:
       specs: ${{ needs.list-specs.outputs.specs }}
 
-  # report:
-  # name: Report
-  # needs: run-specs
-  # uses: "./.github/workflows/cy-slack-reporting.yml"
+  report:
+  name: Report
+  needs: run-specs
+  uses: "./.github/workflows/cy-slack-reporting.yml"
