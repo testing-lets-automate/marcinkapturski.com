@@ -19,7 +19,7 @@ jobs:
     steps:
       - name: Checkout the repository
         if: always()
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Install Node.js
         if: always()
@@ -36,4 +36,6 @@ jobs:
         if: always()
         run: |
           export SCRIPT_PATH=${{ github.workspace }}/cypress/slack/${{ inputs.tests-result == 'success' && 'success_message.js' || 'failed_message.js'}}
-          yarn node $SCRIPT_PATH "${{ secrets.SLACK_WEBHOOK }}"
+          export EVENT_NAME=${{ github.event_name }}
+          export BRANCH_NAME=${GITHUB_REF#refs/heads/}
+          yarn node $SCRIPT_PATH "${{ secrets.SLACK_WEBHOOK }}" "$EVENT_NAME" "$BRANCH_NAME"

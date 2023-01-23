@@ -2,6 +2,8 @@ const fetch = require("isomorphic-fetch");
 
 const args = process.argv;
 const slackWebHook = args[2];
+const githubEvent = args[3];
+const branchName = args[4];
 
 const data = JSON.stringify({
   blocks: [
@@ -9,7 +11,7 @@ const data = JSON.stringify({
       type: "section",
       text: {
         type: "mrkdwn",
-        text: ":white_check_mark: Tests Passed!",
+        text: `:white_check_mark: Tests Passed! for: *${githubEvent}*, branch name: *${branchName}*`,
       },
     },
   ],
