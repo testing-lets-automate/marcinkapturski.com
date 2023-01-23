@@ -1,4 +1,5 @@
-const axios = require("axios");
+const fetch = require("isomorphic-fetch");
+
 const args = process.argv;
 const slackWebHook = args[2];
 
@@ -14,21 +15,18 @@ const data = JSON.stringify({
   ],
 });
 
-// const config = {
-//   method: "POST",
-//   headers: {
-//     "Content-type": "application/json",
-//   },
-//   body: data,
-// };
+const config = {
+  method: "POST",
+  headers: {
+    "Content-type": "application/json",
+  },
+  body: data,
+};
 
 function send_slack_message() {
-  const requestOptions = {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: data,
-  };
-  axios(`https://hooks.slack.com/services/${slackWebHook}`, requestOptions);
+  fetch(`https://hooks.slack.com/services/${slackWebHook}`, config)
+    .then((response) => console.log(response))
+    .then((json) => console.log(json));
 }
 
 send_slack_message();
