@@ -44,19 +44,8 @@ jobs:
         if: ${{ github.event.inputs.environment == 'localhost' || github.event_name == 'pull_request' }}
         run: serve -s ${{ github.workspace }}/build &
 
-      - name: Run Tests on Pull Request
-        if: ${{ github.event_name == 'pull_request' }}
-        uses: cypress-io/github-action@v4
-        with:
-          install: true
-          wait-on: "http://localhost:3000"
-          wait-on-timeout: 120
-          browser: chrome
-          spec: cypress/${{ matrix.spec }}
-          config-file: /${{ github.workspace }}/cypress/configs/cypress.${{ env.DEFAULT_ENV }}.config.js
-
       - name: Run Tests on localhost
-        if: ${{ github.event.inputs.environment == 'localhost' }}
+        if: ${{ github.event_name == 'pull_request' && github.event.inputs.environment == 'localhost' }}
         uses: cypress-io/github-action@v4
         with:
           install: true
@@ -64,7 +53,7 @@ jobs:
           wait-on-timeout: 120
           browser: chrome
           spec: cypress/${{ matrix.spec }}
-          config-file: /${{ github.workspace }}/cypress/configs/cypress.${{ env.ENV_TYPE }}.config.js
+          config-file: /${{ github.workspace }}/cypress/configs/cypress.localhost.config.js
 
       - name: Run Tests on marcinkapturski.com
         if: ${{ github.event_name == 'schedule' || github.event.inputs.environment != 'localhost' && github.event_name != 'pull_request' }}
