@@ -32,7 +32,12 @@ jobs:
     with:
       specs: ${{ needs.list-specs.outputs.specs }}
 
-  # report:
-  # name: Report
-  # needs: run-specs
-  # uses: "./.github/workflows/cy-slack-reporting.yml"
+  report:
+    name: Report
+    needs: run-specs
+    if: always()
+    uses: "./.github/workflows/cy-slack-reporting.yml"
+    secrets:
+      SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+    with:
+      tests-result: ${{ needs.run-specs.result }}
