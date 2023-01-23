@@ -1,4 +1,6 @@
 const axios = require("axios");
+const args = process.argv;
+const slackWebHook = args[2];
 
 const data = JSON.stringify({
   blocks: [
@@ -27,7 +29,7 @@ function send_slack_message() {
     body: data,
   };
   axios(
-    "https://hooks.slack.com/services/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",
+    `https://hooks.slack.com/services/${slackWebHook}`,
     requestOptions
   ).then((response) => response.json());
 }
