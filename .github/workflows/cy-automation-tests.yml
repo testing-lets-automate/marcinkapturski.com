@@ -38,3 +38,5 @@ jobs:
     uses: "./.github/workflows/cy-slack-reporting.yml"
     secrets:
       SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+    with:
+      tests-result: ${{ needs.run-specs.result }}
