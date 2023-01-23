@@ -34,7 +34,7 @@ jobs:
 
   report:
     name: Slack notification
-    # needs: run-specs
+    needs: run-specs
     uses: "./.github/workflows/cy-slack-reporting.yml"
     secrets:
       SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}

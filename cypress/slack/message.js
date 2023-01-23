@@ -9,7 +9,7 @@ const data = JSON.stringify({
       type: "section",
       text: {
         type: "mrkdwn",
-        text: ":white_check_mark: Passed! Tests**",
+        text: ":white_check_mark: Tests Passed!",
       },
     },
   ],
