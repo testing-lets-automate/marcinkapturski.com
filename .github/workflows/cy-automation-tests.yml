@@ -25,7 +25,7 @@ jobs:
     uses: "./.github/workflows/cy-build-packages.yml"
 
   run-specs:
-    name: Specs
+    name: Run
     needs: [list-specs, build-packages]
     if: always()
     uses: "./.github/workflows/cy-run-specs.yml"
