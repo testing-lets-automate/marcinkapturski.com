@@ -45,7 +45,7 @@ jobs:
         run: serve -s ${{ github.workspace }}/build &
 
       - name: Run Tests on localhost
-        if: ${{ github.event_name == 'pull_request' && github.event.inputs.environment == 'localhost' }}
+        if: ${{ github.event_name == 'pull_request' || github.event.inputs.environment == 'localhost' }}
         uses: cypress-io/github-action@v4
         with:
           install: true
