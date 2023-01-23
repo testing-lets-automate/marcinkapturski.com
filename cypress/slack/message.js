@@ -1,6 +1,7 @@
 const axios = require("axios");
 const args = process.argv;
 const slackWebHook = args[1];
+console.log("slackWebHook:", slackWebHook);
 
 const data = JSON.stringify({
   blocks: [
