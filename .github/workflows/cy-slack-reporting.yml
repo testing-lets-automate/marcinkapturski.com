@@ -36,4 +36,4 @@ jobs:
         if: always()
         run: |
           export SCRIPT_PATH=${{ github.workspace }}/cypress/slack/${{ inputs.tests-result == 'success' && 'success_message.js' || 'failed_message.js'}}
-          yarn node $SCRIPT_PATH "${{ secrets.SLACK_WEBHOOK }}"
+          yarn node $SCRIPT_PATH "${{ secrets.SLACK_WEBHOOK }}" "${{ github.event_name }}"
