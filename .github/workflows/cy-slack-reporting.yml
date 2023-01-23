@@ -15,6 +15,16 @@ jobs:
       - name: Checkout the repository
         uses: actions/checkout@v2
 
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: ">=16.0.0"
+
+      - name: install dependency
+        if: always()
+        run: |
+          yarn add isomorphic-fetch
+
       - name: Slack notification
         if: always()
         run: |
