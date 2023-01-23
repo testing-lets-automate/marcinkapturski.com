@@ -26,6 +26,10 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ">=16.0.0"
+          
+      - name: Workflow run url 
+        run: echo ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        shell: bash
 
       - name: install dependency
         if: always()
