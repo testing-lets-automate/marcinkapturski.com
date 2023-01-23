@@ -27,7 +27,7 @@ function send_slack_message() {
     body: data,
   };
   axios(
-    "https://hooks.slack.com/services/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",
+    "https://hooks.slack.com/services/",
     requestOptions
   ).then((response) => response.json());
 }
