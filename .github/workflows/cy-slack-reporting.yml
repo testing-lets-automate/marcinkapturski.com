@@ -27,6 +27,10 @@ jobs:
         with:
           node-version: ">=16.0.0"
 
+      - name: Workflow run url
+        run: echo ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        shell: bash
+
       - name: install dependency
         if: always()
         run: |
@@ -38,4 +42,5 @@ jobs:
           export SCRIPT_PATH=${{ github.workspace }}/cypress/slack/${{ inputs.tests-result == 'success' && 'success_message.js' || 'failed_message.js'}}
           export EVENT_NAME=${{ github.event_name }}
           export BRANCH_NAME=${GITHUB_REF#refs/heads/}
-          yarn node $SCRIPT_PATH "${{ secrets.SLACK_WEBHOOK }}" "$EVENT_NAME" "$BRANCH_NAME"
+          export RUN_URL=${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          yarn node $SCRIPT_PATH "${{ secrets.SLACK_WEBHOOK }}" "$EVENT_NAME" "$BRANCH_NAME" "$RUN_URL"
