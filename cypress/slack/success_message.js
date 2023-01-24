@@ -12,7 +12,7 @@ const data = JSON.stringify({
       type: "section",
       text: {
         type: "mrkdwn",
-        text: `:white_check_mark: Tests Passed! for: *${githubEvent}*, /nbranch name: *${branchName}* /n${runUrl}`,
+        text: `:white_check_mark: Tests Passed! \nRun type: *${githubEvent}*, \nBranch name: *${branchName}* \nRun url: ${runUrl}`,
       },
     },
   ],
