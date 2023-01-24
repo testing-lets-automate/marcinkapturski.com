@@ -7,6 +7,10 @@ on:
         required: true
         type: string
         description: "Test run status"
+      environment:
+        type: string
+        description: "Environment: localhost / marcinkapturski.com"
+        required: true
     secrets:
       SLACK_WEBHOOK:
         required: true
@@ -41,6 +45,7 @@ jobs:
         run: |
           export SCRIPT_PATH=${{ github.workspace }}/cypress/slack/${{ inputs.tests-result == 'success' && 'success_message.js' || 'failed_message.js'}}
           export EVENT_NAME=${{ github.event_name }}
+          export ENVIRONMENT=${{ inputs.environment }}
           export BRANCH_NAME=${GITHUB_REF#refs/heads/}
           export RUN_URL=${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
-          yarn node $SCRIPT_PATH "${{ secrets.SLACK_WEBHOOK }}" "$EVENT_NAME" "$BRANCH_NAME" "$RUN_URL"
+          yarn node $SCRIPT_PATH "${{ secrets.SLACK_WEBHOOK }}" "$EVENT_NAME" "$BRANCH_NAME" "$RUN_URL" "$ENVIRONMENT"
