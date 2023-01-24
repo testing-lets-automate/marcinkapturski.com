@@ -41,7 +41,7 @@ jobs:
         run: |
           export SCRIPT_PATH=${{ github.workspace }}/cypress/slack/${{ inputs.tests-result == 'success' && 'success_message.js' || 'failed_message.js'}}
           export EVENT_NAME=${{ github.event_name }}
-          export ENVIRONMENT=${{ github.event.inputs.environment }}
+          export ENVIRONMENT=${{ github.event.inputs.environment != 'localhost' && 'marcinkapturski.com' || 'localhost'}}
           export BRANCH_NAME=${GITHUB_REF#refs/heads/}
           export RUN_URL=${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
           yarn node $SCRIPT_PATH "${{ secrets.SLACK_WEBHOOK }}" "$EVENT_NAME" "$BRANCH_NAME" "$RUN_URL" "ENVIRONMENT"
