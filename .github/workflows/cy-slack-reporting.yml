@@ -8,7 +8,7 @@ on:
         type: string
         description: "Test run status"
       environment:
-        type: choice
+        type: string
         description: "Environment: localhost / marcinkapturski.com"
         required: true
     secrets:
