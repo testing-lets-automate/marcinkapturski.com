@@ -48,4 +48,4 @@ jobs:
           export ENVIRONMENT=${{ inputs.environment }}
           export BRANCH_NAME=${GITHUB_REF#refs/heads/}
           export RUN_URL=${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
-          yarn node $SCRIPT_PATH "${{ secrets.SLACK_WEBHOOK }}" "$EVENT_NAME" "$BRANCH_NAME" "$RUN_URL" "ENVIRONMENT"
+          yarn node $SCRIPT_PATH "${{ secrets.SLACK_WEBHOOK }}" "$EVENT_NAME" "$BRANCH_NAME" "$RUN_URL" "$ENVIRONMENT"
