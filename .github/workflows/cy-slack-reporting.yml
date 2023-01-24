@@ -31,10 +31,6 @@ jobs:
         with:
           node-version: ">=16.0.0"
 
-      - name: Workflow run url
-        run: echo ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
-        shell: bash
-
       - name: install dependency
         if: always()
         run: |
@@ -43,7 +39,7 @@ jobs:
       - name: Slack (${{ inputs.tests-result }}) notification
         if: always()
         run: |
-          export SCRIPT_PATH=${{ github.workspace }}/cypress/slack/${{ inputs.tests-result == 'success' && 'success_message.js' || 'failed_message.js'}}
+          export SCRIPT_PATH=${{ github.workspace }}/slack/${{ inputs.tests-result == 'success' && 'success_message.js' || 'failed_message.js'}}
           export EVENT_NAME=${{ github.event_name }}
           export ENVIRONMENT=${{ inputs.environment }}
           export BRANCH_NAME=${GITHUB_REF#refs/heads/}
