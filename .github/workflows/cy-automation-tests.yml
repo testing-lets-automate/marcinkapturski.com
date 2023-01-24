@@ -41,3 +41,4 @@ jobs:
       SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
     with:
       tests-result: ${{ needs.run-specs.result }}
+      environment: ${{ inputs.environment }}
