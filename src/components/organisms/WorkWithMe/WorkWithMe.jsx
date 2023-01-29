@@ -28,7 +28,7 @@ const WorkWithMe = () => {
                     software in order to meet the highest quality standards,
                     work with me. <br />
                     <br />
-                    Fill out the form below or contact me directly
+                    Fill out the form below or contact me directly.
                   </blockquote>
                 </div>
               </div>

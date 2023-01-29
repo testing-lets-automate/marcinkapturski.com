@@ -90,7 +90,7 @@ const Contact = () => {
                     </div>
                     <div className="text-center">
                       <div className="field-set">
-                        <Textarea placeholder="How can I help you? Give me some context of what kind of quality assurance you’re looking for:" />
+                        <Textarea placeholder="How can I help you? Give me some context of what kind of quality assurance you’re looking for." />
                       </div>
                     </div>
                     <div className="text-center">
