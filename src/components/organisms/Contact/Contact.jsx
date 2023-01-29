@@ -74,7 +74,7 @@ const Contact = () => {
                           <Input
                             name="Email"
                             id="email"
-                            placeholder="Your E-mail address"
+                            placeholder="Your e-mail address"
                           />
                         </div>
                       </div>
@@ -83,14 +83,14 @@ const Contact = () => {
                           <Input
                             name="Phone"
                             id="phone"
-                            placeholder="Your Phone number"
+                            placeholder="Your phone number"
                           />
                         </div>
                       </div>
                     </div>
                     <div className="text-center">
                       <div className="field-set">
-                        <Textarea placeholder="How can I help you? Give me some context of what kind of quality assurance you’re looking for:" />
+                        <Textarea placeholder="How can I help you? Give me some context of what kind of quality assurance you’re looking for." />
                       </div>
                     </div>
                     <div className="text-center">

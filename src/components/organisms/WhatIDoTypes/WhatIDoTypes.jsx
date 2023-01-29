@@ -23,7 +23,7 @@ const WhatIDoTypes = () => {
         >
           <blockquote className="q-big">
             I ensure the technology meets high-quality standards. I have a
-            proven track record of developing automation tests and testes
+            proven track record of developing automation tests and test
             strategies performed manually and automatically.
           </blockquote>
           <div className="spacer-single"></div>
