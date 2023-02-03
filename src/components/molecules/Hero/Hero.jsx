@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-scroll";
 import Image from "components/atoms/Image/Image";
-import face from "../../../assets/place_holder.png";
+import face from "../../../assets/banner_image.png";
 import Typed from "react-typed";
 import AOS from "aos";
 
