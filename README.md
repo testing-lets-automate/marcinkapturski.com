@@ -1,4 +1,6 @@
 ## Overview
+<img width="1002" alt="marcinkapturski.com" src="https://user-images.githubusercontent.com/41780000/216717242-f88147a2-2110-4afb-b7d9-17ae6f58bae3.png">
+
 
 This is my personal website, blog and part of my portfolio.
 Written using JavaScript, built with React, tested by Cypress automation.
