@@ -7,9 +7,9 @@ Feature: Page Images are loaded
         Then Image "<image>" is visible on the page with "<content>"
 
         Examples:
-            | image             | content               |
-            | logo-image        | data:image/png;base64 |
-            | web-automation    | data:image/png;base64 |
-            | mobile-automation | data:image/png;base64 |
-            | test-strategies   | data:image/png;base64 |
-            | hero-image        | data:image/png;base64 |
+            | image             | content                    |
+            | logo-image        | data:image/png;base64      |
+            | web-automation    | data:image/png;base64      |
+            | mobile-automation | data:image/png;base64      |
+            | test-strategies   | data:image/png;base64      |
+            | hero-image        | /static/media/banner_image |
