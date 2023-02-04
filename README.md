@@ -3,9 +3,9 @@
 ## Overview
 [![Cypress - pass](https://img.shields.io/badge/Cypress-pass-2ea44f?logo=Cypress)](https://)
 
-[![JavaScript - build by](https://img.shields.io/badge/JavaScript-_-2ea44f?logo=JavaScript)](https://)
+[![JavaScript - build by](https://img.shields.io/badge/JavaScript-_-blue?logo=JavaScript)](https://)
 
-[![React - build in](https://img.shields.io/badge/React-_-React?logo=React)](https://)
+[![React - build in](https://img.shields.io/badge/React-_-blue?logo=React)](https://)
 
 [![DatoCMS -  ](https://img.shields.io/badge/DatoCMS-_-blue?logo=DatoCMS)](https://)
 
