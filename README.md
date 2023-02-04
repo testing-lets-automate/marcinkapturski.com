@@ -3,7 +3,11 @@
 ## Overview
 [![Cypress - pass](https://img.shields.io/badge/Cypress-pass-2ea44f?logo=Cypress)](https://)
 
+[![JavaScript - build by](https://img.shields.io/badge/JavaScript-used_by-2ea44f?logo=JavaScript)](https://)
 
+[![React - build in](https://img.shields.io/badge/React-used_in-React?logo=React)](https://)
+
+[![DatoCMS - used in](https://img.shields.io/badge/DatoCMS-used_in-blue?logo=DatoCMS)](https://)
 
 This is my personal website, blog and part of my portfolio.
 Written using JavaScript, built with React, tested by Cypress automation.
