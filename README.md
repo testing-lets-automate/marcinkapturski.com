@@ -5,6 +5,7 @@
     <img src="https://img.shields.io/badge/React-_-blue?logo=React" alt="React" style="vertical-align:top; margin:4px">
     <img src="https://img.shields.io/badge/Cypress-_-blue?logo=Cypress" alt="Cypress" style="vertical-align:top; margin:4px">    
     <img src="https://img.shields.io/badge/DatoCMS-_-blue?logo=DatoCMS" alt="DatoCMS" style="vertical-align:top; margin:4px">
+    <img src="https://img.shields.io/badge/GitHubActions-_-blue?logo=GitHubActions" alt="GitHub Actions" style="vertical-align:top; margin:4px">
     <img src="https://img.shields.io/badge/JavaScript-_-blue?logo=JavaScript" alt="JavaScript" style="vertical-align:top; margin:4px">
 </p>
 
