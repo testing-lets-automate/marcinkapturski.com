@@ -1,6 +1,13 @@
-## Overview
 <img width="1002" alt="marcinkapturski.com" src="https://user-images.githubusercontent.com/41780000/216717242-f88147a2-2110-4afb-b7d9-17ae6f58bae3.png">
 
+## Overview
+<p align="center">   
+    <img src="https://img.shields.io/badge/React-_-blue?logo=React" alt="React" style="vertical-align:top; margin:4px">
+    <img src="https://img.shields.io/badge/Cypress-_-blue?logo=Cypress" alt="Cypress" style="vertical-align:top; margin:4px">    
+    <img src="https://img.shields.io/badge/DatoCMS-_-blue?logo=DatoCMS" alt="DatoCMS" style="vertical-align:top; margin:4px">
+    <img src="https://img.shields.io/badge/GitHubActions-_-blue?logo=GitHubActions" alt="GitHub Actions" style="vertical-align:top; margin:4px">
+    <img src="https://img.shields.io/badge/JavaScript-_-blue?logo=JavaScript" alt="JavaScript" style="vertical-align:top; margin:4px">
+</p>
 
 This is my personal website, blog and part of my portfolio.
 Written using JavaScript, built with React, tested by Cypress automation.
