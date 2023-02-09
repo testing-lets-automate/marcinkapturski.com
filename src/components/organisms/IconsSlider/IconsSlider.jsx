@@ -10,8 +10,8 @@ import { iconsAnimationSettings } from "../../../utils/IconsAnimationSettings";
 import { createGlobalStyle } from "styled-components";
 import javascriptico from "../../../assets/icon-panel/javascript-ico.png";
 import cypressicon from "../../../assets/icon-panel/cypress-ico-bw.png";
-import appiumicon from "../../../assets/icon-panel/appium-ico-bw.png";
-import reacticon from "../../../assets/icon-panel/react-ico.png";
+import appiumicon from "../../../assets/icon-panel/appium-ico-2-bw.png";
+import reacticon from "../../../assets/icon-panel/react-ico-bw.png";
 import githubicon from "../../../assets/icon-panel/github-ico.png";
 import grafanaicon from "../../../assets/icon-panel/grafana-ico.png";
 import postmanicon from "../../../assets/icon-panel/postman-ico-bw.png";
@@ -80,22 +80,22 @@ const IconsSlider = function () {
                 <CustomSlide className="itm" index={3}>
                   <div className="de_count text-center">
                     <Image
-                      src={appiumicon}
+                      src={javascriptico}
                       className={"img-icon-slider"}
-                      alt={"Appium"}
+                      alt={"Logo"}
                     />
-                    <span>Appium</span>
+                    <span>JavaScript</span>
                   </div>
                 </CustomSlide>
 
                 <CustomSlide className="itm" index={4}>
                   <div className="de_count text-center">
                     <Image
-                      src={javascriptico}
+                      src={appiumicon}
                       className={"img-icon-slider"}
-                      alt={"Logo"}
+                      alt={"Appium"}
                     />
-                    <span>JavaScript</span>
+                    <span>Appium</span>
                   </div>
                 </CustomSlide>
 
