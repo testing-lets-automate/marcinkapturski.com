@@ -1,17 +1,21 @@
-import { Link } from "react-scroll";
 import Image from "components/atoms/Image/Image";
 import logo from "../../../assets/logo.png";
 
 const Logo = () => {
   return (
-    <Link className="navbar-brand" activeClass="active" spy to="hero-area">
+    <a
+      className="navbar-brand"
+      activeClass="active"
+      href="/"
+      data-testid="navigation_item"
+    >
       <Image
         src={logo}
-        className={"img-fluid imggrey"}
+        className={"logo-img"}
         alt={"Logo"}
         datatestid="logo-image"
       />
-    </Link>
+    </a>
   );
 };
 

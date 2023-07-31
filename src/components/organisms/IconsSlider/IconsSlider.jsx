@@ -40,7 +40,6 @@ const IconsSlider = function () {
     <section id="skills" className="pb-0">
       <div className="spacer-double"></div>
       <div className="spacer-double"></div>
-      <Heading text="Technology I love" />
       <Parallax className="pb-5" bgImage={background} strength={300}>
         <div className="spacer-double"></div>
         <div
