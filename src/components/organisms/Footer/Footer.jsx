@@ -3,6 +3,8 @@ import React from "react";
 const Footer = () => {
   return (
     <section id="contact" className="pb-0">
+      <div className="spacer-double"></div>
+      <div className="spacer-double"></div>
       <footer>
         <div className="container">
           <div className="row">
@@ -13,30 +15,14 @@ const Footer = () => {
             </div>
             <div className="col-md-6">
               <p className="footer-text">
-                This website was built with <b>React</b>, tested by{" "}
-                <b> Cypress,</b> described by Feature files
+                This website is built by <b>React</b>, tested by <b> Cypress</b>{" "}
+                / Read more on
                 <a
                   target="_blank"
                   rel="noreferrer"
-                  href="https://github.com/marcinkapturski/marcinkapturski.com/tree/master/cypress/e2e"
+                  href="https://github.com/marcinkapturski/marcinkapturski.com"
                 >
-                  <b className="footer-link">BDD(Cucumber),</b>
-                </a>
-                run on
-                <a
-                  target="_blank"
-                  rel="noreferrer"
-                  href="https://github.com/marcinkapturski/marcinkapturski.com/actions"
-                >
-                  <b className="footer-link">GitHub Actions</b>
-                </a>{" "}
-                / read more
-                <a
-                  target="_blank"
-                  rel="noreferrer"
-                  href="https://github.com/marcinkapturski/marcinkapturski.com/blob/master/README.md"
-                >
-                  <b className="footer-link">here</b>
+                  <b className="footer-link">GitHub</b>
                 </a>
               </p>
             </div>

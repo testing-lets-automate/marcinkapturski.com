@@ -34,19 +34,13 @@ const Header = function () {
           <Logo />
           <div className="dekstopmenu">
             <ul className="navbar-nav" data-testid="navigation-panel">
-              <NavigationItem url="hero-area" name="Start" />
-              <NavigationItem url="whatido" name="What I Do" />
-              <NavigationItem url="workwithme" name="Work with me" />
-              <NavigationItem url="contact" name="Contact" />
+              <NavigationItem url="/" name="Home page" />
             </ul>
           </div>
           {showmenu && (
             <div className="mobilemenu">
               <ul className="navbar-nav mr-auto w-100 justify-content-end clearfix">
-                <NavigationItemMobile url="hero-area" name="Start" />
-                <NavigationItemMobile url="whatido" name="What I Do" />
-                <NavigationItemMobile url="workwithme" name="Work with me" />
-                <NavigationItemMobile url="contact" name="Contact" />
+                <NavigationItemMobile url="/" name="Home page" />
               </ul>
             </div>
           )}

@@ -220,7 +220,7 @@ h2 {
 }
 section, .section{
   position: relative;
-  padding: 90px 0;
+  padding: 0;
   width: 100%;
   height: auto;
   background: #171A1D;
@@ -387,6 +387,7 @@ section, .section{
 }
 .space-border {
   width: 30px;
+
   height: 1px;
   position: relative;
   margin: 0 auto;
@@ -417,10 +418,15 @@ section, .section{
   z-index: 2;
   .imginit{
     display: block;
+    padding: 5px 0 5px 0;
   }
   .imgsaly, .imggrey, .imgchef, .imgdesigner, .imglawyer, .imgdark{
     display: none;
   }
+}
+
+.logo-img {
+  padding: 5px 0 5px 0;
 }
 #header-wrap {
   width: 100%;
@@ -851,6 +857,10 @@ h3.s_border {
     font-size: 20px;
     margin-top: 10px;
     margin-bottom: 10px;
+  }
+  h4 a {
+    text-decoration: none;
+    color: #0f0f0f;
   }
   p{
     color: #aaaaaa;

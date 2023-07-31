@@ -1,18 +1,15 @@
-import { Link } from "react-scroll";
-
 const NavigationItem = ({ url, name }) => {
   return (
     <>
       <li className="nav-item">
-        <Link
+        <a
           className="nav-link transition"
           activeClass="active"
-          spy
-          to={url}
+          href={url}
           data-testid="navigation_item"
         >
           {name}
-        </Link>
+        </a>
       </li>
     </>
   );
