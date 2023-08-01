@@ -1,5 +1,6 @@
 import emailjs from "emailjs-com";
 import { Parallax } from "react-parallax";
+
 import background from "../../../assets/background.jpg";
 import Heading from "components/atoms/Heading/Heading";
 import Text from "components/atoms/Text/Text";
@@ -8,6 +9,10 @@ import Textarea from "components/atoms/Textarea/Textarea";
 import ButtonSubmit from "components/atoms/Buttons/ButtonSubmit/ButtonSubmit";
 import AOS from "aos";
 AOS.init();
+
+const EMAIL_JI_SERVICE = process.env.DATOCMS_API_TOKEN;
+const EMAIL_JI_TEMPLATE = process.env.DATOCMS_API_TOKEN;
+const EMAIL_JI_PASSWORD = process.env.DATOCMS_API_TOKEN;
 
 const Contact = () => {
   function sendEmail(e) {
@@ -18,10 +23,10 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        process.env.EMAIL_JI_SERVICE,
-        process.env.EMAIL_JI_TEMPLATE,
+        EMAIL_JI_SERVICE,
+        EMAIL_JI_TEMPLATE,
         e.target,
-        process.env.EMAIL_JI_PASSWORD
+        EMAIL_JI_PASSWORD
       )
       .then(
         (result) => {
