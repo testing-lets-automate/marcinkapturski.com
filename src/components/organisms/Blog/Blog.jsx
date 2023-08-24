@@ -30,11 +30,27 @@ const Blog = ({ posts }) => {
 
   return (
     <section id="blog" className="pb-0">
-      <div className="spacer-double"></div>
       <div className="container">
         <GlobalStyles />
-        <div className="spacer-single"></div>
+        <div className="spacer-double"></div>
+        <div className="spacer-double"></div>
         <Heading text="From Blog" />
+        <div
+          className="col-md-8 text-center m-auto"
+          data-aos="fade-up"
+          data-aos-delay="60"
+          data-aos-duration="1000"
+          data-aos-easing="ease"
+          data-aos-once="true"
+        >
+          <blockquote className="q-big">
+            This blog is as an extension of my portfolio and a collection of
+            solutions for challenges I had the pleasure to face. The thorough
+            illustration of my concepts and capabilities.
+          </blockquote>
+          <div className="spacer-double"></div>
+          <div className="spacer-double"></div>
+        </div>
         <div className="row" data-aos="fade-up" data-aos-once="true">
           {isSliderInitialized ? (
             <Slider {...blogAnimationSettings}>

@@ -1,6 +1,6 @@
 import React from "react";
 import Heading from "components/atoms/Heading/Heading";
-import WhatIDoTypes from "components/organisms/WhatIDoTypes/WhatIDoTypes";
+import WhatIDoTypes from "components/organisms/WhatIDoTypes/WhatIDoContentArea";
 import AOS from "aos";
 AOS.init();
 
@@ -21,7 +21,7 @@ const ProblemsISolve = () => {
           <p>
             I am driven by developing life-changing, innovative and
             highly-advanced software solutions. I consider creativity and growth
-            mindset as the main factors of success even over my 14 years of
+            mindset as the main factors of success even over my 20 years of
             experience
           </p>
         </div>

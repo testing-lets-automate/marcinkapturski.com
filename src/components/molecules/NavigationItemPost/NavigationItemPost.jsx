@@ -1,20 +1,18 @@
-import { Link } from "react-scroll";
-
-const NavigationItem = ({ section, name }) => {
+const NavigationItemPost = ({ url, name }) => {
   return (
     <>
       <li className="nav-item">
-        <Link
+        <a
+          href={url}
           className="nav-link transition"
-          spy
-          to={section}
+          to={url}
           data-testid="navigation_item"
         >
           {name}
-        </Link>
+        </a>
       </li>
     </>
   );
 };
 
-export default NavigationItem;
+export default NavigationItemPost;
