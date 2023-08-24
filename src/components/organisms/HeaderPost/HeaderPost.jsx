@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Burgermenu from "components/atoms/Buttons/Burgermenu/Burgermenu";
 import Logo from "components/molecules/Logo/Logo";
-import NavigationItem from "components/molecules/NavigationItem/NavigationItem";
+import NavigationItemPost from "components/molecules/NavigationItemPost/NavigationItemPost";
 
 const Header = function () {
   const [showmenu, btn_icon] = useState(false);
@@ -14,12 +14,8 @@ const Header = function () {
       btn_icon(false);
       if (window.pageYOffset > sticky) {
         header.classList.add("sticky");
-        totop.classList.add("show");
-        flytext.classList.add("hide");
       } else {
         header.classList.remove("sticky");
-        flytext.classList.remove("hide");
-        totop.classList.remove("show");
       }
     });
     return () => {
@@ -33,21 +29,13 @@ const Header = function () {
           <Logo />
           <div className="dekstopmenu">
             <ul className="navbar-nav" data-testid="navigation-panel">
-              <NavigationItem name="Home page" section="hero-area" />
-              <NavigationItem name="What I do" section="whatido" />
-              <NavigationItem name="Portfolio" section="portfolio" />
-              <NavigationItem name="Blog" section="blog" />
-              <NavigationItem name="Contact" section="contact" />
+              <NavigationItemPost name="Home page" url="/" />
             </ul>
           </div>
           {showmenu && (
             <div className="mobilemenu">
               <ul className="navbar-nav mr-auto w-100 justify-content-end clearfix">
-                <NavigationItem name="Home page" section="hero-area" />
-                <NavigationItem name="What I do" section="whatido" />
-                <NavigationItem name="Portfolio" section="portfolio" />
-                <NavigationItem name="Blog" section="blog" />
-                <NavigationItem name="Contact" section="contact" />
+                <NavigationItemPost name="Home page" url="/" />
               </ul>
             </div>
           )}

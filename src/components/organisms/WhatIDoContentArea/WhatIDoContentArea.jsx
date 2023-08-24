@@ -1,15 +1,13 @@
 import React from "react";
 import Heading from "components/atoms/Heading/Heading";
-import webautomation from "../../../assets/web-automation.png";
-import mobileautomation from "../../../assets/mobile-automation.png";
-import teststrategies from "../../../assets/test-strategies.png";
 import AOS from "aos";
 AOS.init();
 
-const WhatIDoTypes = () => {
+const WhatIDoContentArea = () => {
   return (
     <section id="whatido">
       <div className="container">
+        <div className="spacer-double"></div>
         <div className="spacer-double"></div>
         <Heading text="What I do" />
         <div className="spacer-single"></div>
@@ -26,8 +24,7 @@ const WhatIDoTypes = () => {
             proven track record of developing automation tests and test
             strategies performed manually and automatically.
           </blockquote>
-          <div className="spacer-single"></div>
-          <div className="spacer-single"></div>
+          <div className="spacer-double"></div>
         </div>
         <div className="row">
           <div
@@ -40,14 +37,6 @@ const WhatIDoTypes = () => {
           >
             <div className="de_3d-box">
               <div className="d-inner">
-                <div>
-                  <img
-                    src={webautomation}
-                    alt={"web automation"}
-                    data-testid="web-automation"
-                    className="what-i-do-image"
-                  />
-                </div>
                 <div className="text">
                   <h3>Web & API automation</h3>I am writing WEB & API tests,
                   mostly with{" "}
@@ -55,7 +44,7 @@ const WhatIDoTypes = () => {
                     className="link_black"
                     target="_blank"
                     rel="noreferrer"
-                    href="https://github.com/marcinkapturski/marcinkapturski.com/tree/master/cypress"
+                    href="https://www.cypress.io"
                   >
                     Cypress tool
                   </a>{" "}
@@ -64,9 +53,9 @@ const WhatIDoTypes = () => {
                     className="link_black"
                     target="_blank"
                     rel="noreferrer"
-                    href="https://github.com/marcinkapturski/github-action-workflows"
+                    href="https://docs.github.com/en/actions/quickstart"
                   >
-                    GitHub Action workflows
+                    GitHub Actions
                   </a>{" "}
                   by runing them in different ways and on many environments
                 </div>
@@ -83,27 +72,38 @@ const WhatIDoTypes = () => {
           >
             <div className="de_3d-box">
               <div className="d-inner">
-                <div>
-                  <img
-                    src={mobileautomation}
-                    alt={"mobile automation"}
-                    data-testid="mobile-automation"
-                    className="what-i-do-image"
-                  />
-                </div>
                 <div className="text">
                   <h3>Mobile automation tests</h3>
                   Changes in software development inspired me to start
-                  supporting mobile automation with{" "}
+                  supporting mobile automation ( iOS / Android ) with{" "}
                   <a
                     className="link_black"
                     target="_blank"
                     rel="noreferrer"
-                    href="https://github.com/marcinkapturski/mobile-web-automation"
+                    href="http://appium.io"
                   >
-                    Appium & Wdio for iOS & Android
+                    Appium
+                  </a>
+                  ,
+                  <a
+                    className="link_black"
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://www.browserstack.com"
+                  >
+                    {" "}
+                    Browserstack
                   </a>{" "}
-                  devices (Browserstack, Lambdatest)
+                  or
+                  <a
+                    className="link_black"
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://www.lambdatest.com"
+                  >
+                    {" "}
+                    Lambdatest
+                  </a>
                 </div>
               </div>
             </div>
@@ -118,27 +118,11 @@ const WhatIDoTypes = () => {
           >
             <div className="de_3d-box">
               <div className="d-inner">
-                <div>
-                  <img
-                    src={teststrategies}
-                    alt={"test strategies"}
-                    data-testid="test-strategies"
-                    className="what-i-do-image"
-                  />
-                </div>
                 <div className="text">
                   <h3>Developing test strategies</h3>
-                  Well-written tests require proper planning <br />I like to use
-                  Mind Map from{" "}
-                  <a
-                    className="link_black"
-                    target="_blank"
-                    rel="noreferrer"
-                    href="https://miro.com/app/board/uXjVPxsPXv4=/"
-                  >
-                    Miro
-                  </a>{" "}
-                  for visibility, Jira or TFS for transparency and task tracking
+                  Well-written tests require proper planning <br />I specialize
+                  in comprehensive software testing planning and crafting
+                  practical testing concepts
                 </div>
               </div>
             </div>
@@ -149,4 +133,4 @@ const WhatIDoTypes = () => {
   );
 };
 
-export default WhatIDoTypes;
+export default WhatIDoContentArea;

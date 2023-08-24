@@ -12,8 +12,8 @@ import HeadingPost from "components/atoms/HeadingPost/HeadingPost";
 import Text from "components/atoms/Text/Text";
 import { format } from "date-fns";
 
-const PostPage = () => {
-  const [post, setPost] = useState();
+const PortfolioPage = () => {
+  const [portfolio, setPost] = useState();
   const [isFetching, setIsFetching] = useState(false);
   const { slug } = useParams();
 
@@ -24,7 +24,7 @@ const PostPage = () => {
           slug: slug,
         };
         const result = await client.request(query, variables);
-        setPost(result.post);
+        setPost(result.portfolio);
         setIsFetching(false);
       } catch (error) {
         console.error(JSON.stringify(error, undefined, 2));
@@ -76,7 +76,7 @@ const PostPage = () => {
       {isFetching ? (
         <h2>Loading...</h2>
       ) : (
-        post && (
+        portfolio && (
           <>
             <div className="home">
               <Preloader />
@@ -84,43 +84,18 @@ const PostPage = () => {
               <div className="spacer-double"></div>
               <div className="spacer-double"></div>
               <div className="container">
-                <div className="row g-5">
-                  <div className="col-lg-9">
-                    <HeadingPost text={post.title} />
+                <div className="row g-14">
+                  <div className="col-lg-14">
+                    <HeadingPost text={portfolio.title} />
                     <div className="spacer-single"></div>
                     <div>
                       <Text
-                        text={renderContent(post.body.value.document.children)}
-                        id={post.id}
+                        text={renderContent(
+                          portfolio.body.value.document.children
+                        )}
+                        id={portfolio.id}
                       />
                     </div>
-                  </div>
-                  <div className="col-lg-3 de_project-info">
-                    <div className="spacer-double"></div>
-                    <div className="spacer-single"></div>
-                    <div className="de_project-details">
-                      <div className="d-field">
-                        <i className="fa fa-external-link"></i>GitHub:{" "}
-                        <span>
-                          <a
-                            href={post.github || ""}
-                            target="_blank"
-                            rel="noreferrer"
-                          >
-                            {post.githubLinkName || ""}
-                          </a>
-                        </span>
-                      </div>
-                      <div className="d-field">
-                        <i className="fa fa-user-o"></i>Category:{" "}
-                        <span>{post.category.name}</span>
-                      </div>
-                    </div>
-                    <div className="spacer-30"></div>
-                    <p>
-                      <i className="fa fa-calendar-o"></i> Post date:{" "}
-                      {format(new Date(post._firstPublishedAt), "dd-MM-yyyy")}
-                    </p>
                   </div>
                 </div>
               </div>
@@ -137,19 +112,15 @@ const PostPage = () => {
 
 const query = `
 query getPostSinglePost($slug: String!) {
-  post(filter: { slug: { eq: $slug } }) {
+  portfolio(filter: { slug: { eq: $slug } }) {
     id
     title
     slug
     body {
       value
     }
-    category { name }
-    _firstPublishedAt
-    github
-    githubLinkName
   }
 }
 `;
 
-export default PostPage;
+export default PortfolioPage;

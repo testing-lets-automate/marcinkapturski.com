@@ -574,14 +574,15 @@ blockquote.q-big .d-big {
     }
     h3 {
       opacity: 0;
-      margin: 0;
       font-size: 22px;
       transition: .5s;
+      position: absolute;
+      bottom: 15%;
     }
     h5 {
       opacity: 0;
       font-weight: 300;
-      font-size: 14px;
+      font-size: 18px;
       color: #ffffff;
       position: absolute;
       left: 0;

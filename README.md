@@ -6,6 +6,7 @@
 </p>
 
 ## Overview
+
 <p align="center">   
     <img src="https://img.shields.io/badge/React-_-blue?logo=React" alt="React" style="vertical-align:top; margin:4px">
     <img src="https://img.shields.io/badge/Cypress-_-blue?logo=Cypress" alt="Cypress" style="vertical-align:top; margin:4px">    
@@ -14,11 +15,10 @@
     <img src="https://img.shields.io/badge/JavaScript-_-blue?logo=JavaScript" alt="JavaScript" style="vertical-align:top; margin:4px">
 </p>
 
-This is my personal website, blog and part of my portfolio.
+This is my portfolio, blog and personal website.
 Written using JavaScript, built with React, tested by Cypress automation.
 
-
- To run Website Locally
+To run Website Locally
 
 ```bash
 # install necessary packages
@@ -30,8 +30,7 @@ yarn start
 
 Open http://localhost:3000 with your browser to see the result
 
-
-  ## Cypress automation tests
+## Cypress automation tests
 
 ```bash
 # install necessary packages
@@ -41,9 +40,7 @@ yarn
 yarn cy:run
 ```
 
-
-
-  ## Tests structure and Gherkin language
+## Tests structure and Gherkin language
 
 Under path: `/cypress/e2e` are all automation tests written in Gherkin language
 

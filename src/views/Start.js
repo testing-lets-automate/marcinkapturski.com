@@ -5,12 +5,10 @@ import Preloader from "components/organisms/Preloader/Preloader";
 import Header from "components/organisms/Header/Header";
 import SocialIcons from "components/atoms/SocialIcons/SocialIcons";
 import HeroArea from "components/organisms/HeroArea/HeroArea";
-import AboutBlog from "components/molecules/AboutBlog/AboutBlog";
-import WhatIDoTypes from "components/organisms/WhatIDoTypes/WhatIDoTypes";
-import IconsSlider from "components/organisms/IconsSlider/IconsSlider";
+import Portfolio from "components/organisms/Portfolio/Portfolio.jsx";
+import WhatIDoContentArea from "components/organisms/WhatIDoContentArea/WhatIDoContentArea.jsx";
 import Blog from "components/organisms/Blog/Blog";
-import WorkWithMe from "components/organisms/WorkWithMe/WorkWithMe";
-import Contact from "components/organisms/Contact/Contact";
+import ContactContentArea from "components/organisms/ContactContentArea/ContactContentArea.jsx";
 import ScrollToTop from "components/organisms/ScrollToTop/ScrollToTop";
 import Footer from "components/organisms/Footer/Footer";
 
@@ -45,12 +43,10 @@ function StartPage() {
               <Preloader />
               <Header />
               <HeroArea />
-              <AboutBlog />
-              <IconsSlider />
-              <WhatIDoTypes />
+              <WhatIDoContentArea />
+              <Portfolio />
+              <ContactContentArea />
               <Blog posts={posts} />
-              <WorkWithMe />
-              <Contact />
               <Footer />
               <SocialIcons text="GitHub" />
             </div>
