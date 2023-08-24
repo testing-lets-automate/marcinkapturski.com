@@ -3,12 +3,7 @@ import logo from "../../../assets/logo.png";
 
 const Logo = () => {
   return (
-    <a
-      className="navbar-brand"
-      activeClass="active"
-      href="/"
-      data-testid="navigation_item"
-    >
+    <a className="navbar-brand" href="/" data-testid="navigation_item">
       <Image
         src={logo}
         className={"logo-img"}
