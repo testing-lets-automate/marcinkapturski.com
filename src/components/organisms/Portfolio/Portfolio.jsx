@@ -33,7 +33,7 @@ const Portfolio = function () {
             data-aos="fade-up"
             data-aos-once="true"
           >
-            <a href="http://localhost:3000/#/portfolio/ui-api-automation">
+            <a href="https://marcinkapturski.com/#/portfolio/ui-api-automation">
               <div className="card-image-1">
                 <div className="d-text">
                   <h5 className="d-tag">Automation tests with Cypress tool</h5>
@@ -47,7 +47,7 @@ const Portfolio = function () {
             data-aos="fade-up"
             data-aos-once="true"
           >
-            <a href="http://localhost:3000/#/portfolio/test-planning-tests-execution">
+            <a href="https://marcinkapturski.com/#/portfolio/test-planning-tests-execution">
               <div className="card-image-1">
                 <div className="d-text">
                   <h5 className="d-tag">Tests planning, tests execution</h5>
@@ -61,7 +61,7 @@ const Portfolio = function () {
             data-aos="fade-up"
             data-aos-once="true"
           >
-            <a href="http://localhost:3000/#/portfolio/mobile-automation">
+            <a href="https://marcinkapturski.com/#/portfolio/mobile-automation">
               <div className="card-image-1">
                 <div className="d-text">
                   <h5 className="d-tag">
@@ -77,7 +77,7 @@ const Portfolio = function () {
             data-aos="fade-up"
             data-aos-once="true"
           >
-            <a href="http://localhost:3000/#/portfolio/ci-github-gitlab-automation">
+            <a href="https://marcinkapturski.com/#/portfolio/ci-github-gitlab-automation">
               <div className="card-image-1">
                 <div className="d-text">
                   <h5 className="d-tag">
