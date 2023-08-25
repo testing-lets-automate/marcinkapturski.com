@@ -21,7 +21,7 @@ const Hero = () => {
           <div className="col-md-6">
             <div className="spacer-20"></div>
             <div className="h1_big">
-              Hi, I'm Marcin Kapturski a Freelance Test Automation Engineer.
+              Hi, I'm a Freelance Test Automation Engineer.
             </div>
             <div
               className="h1_big"
