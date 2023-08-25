@@ -7,7 +7,7 @@ const SocialIcons = ({ text }) => {
             <a
               target="_blank"
               rel="noreferrer"
-              href="https://github.com/marcinkapturski/marcinkapturski.com"
+              href="https://github.com/marcinkapturski"
             >
               <i className="fa fa-github fa-lg"></i>
             </a>

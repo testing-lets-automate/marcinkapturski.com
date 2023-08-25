@@ -20,7 +20,7 @@ const Footer = () => {
                 <a
                   target="_blank"
                   rel="noreferrer"
-                  href="https://github.com/marcinkapturski/marcinkapturski.com"
+                  href="https://github.com/marcinkapturski"
                 >
                   <b className="footer-link">GitHub</b>
                 </a>
