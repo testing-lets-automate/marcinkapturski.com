@@ -56,7 +56,9 @@ const ContactContentArea = () => {
                     <div className="wm-1"></div>
                     <h6>My e-mail</h6>
                     <p>
-                      <a href="/">contact@marcinkapturski.com</a>
+                      <a href="mailto:contact@marcinkapturski.com">
+                        contact@marcinkapturski.com
+                      </a>
                     </p>
                   </div>
                   <div
