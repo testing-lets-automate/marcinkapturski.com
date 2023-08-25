@@ -4,9 +4,11 @@ import { createGlobalStyle } from "styled-components";
 import Heading from "components/atoms/Heading/Heading";
 import Image from "components/atoms/Image/Image";
 import automationImg from "../../../assets/start-portfolio-pictures/ui-api-automation.png";
-import ciImg from "../../../assets/start-portfolio-pictures/ci-run-tests.png";
 import mobileImg from "../../../assets/start-portfolio-pictures/mobile-automation.png";
 import testingStrategy from "../../../assets/start-portfolio-pictures/testing-strategy.png";
+import testRun from "../../../assets/start-portfolio-pictures/test-running.png";
+import peripheral from "../../../assets/start-portfolio-pictures/peripheral-assets.png";
+import reporting from "../../../assets/start-portfolio-pictures/reporting.png";
 
 import AOS from "aos";
 AOS.init();
@@ -33,7 +35,7 @@ const Portfolio = function () {
             data-aos="fade-up"
             data-aos-once="true"
           >
-            <a href="https://marcinkapturski.com/#/portfolio/ui-api-automation">
+            <a href="#/portfolio/ui-api-automation">
               <div className="card-image-1">
                 <div className="d-text">
                   <h5 className="d-tag">Automation tests with Cypress tool</h5>
@@ -47,7 +49,7 @@ const Portfolio = function () {
             data-aos="fade-up"
             data-aos-once="true"
           >
-            <a href="https://marcinkapturski.com/#/portfolio/test-planning-tests-execution">
+            <a href="#/portfolio/test-planning-tests-execution">
               <div className="card-image-1">
                 <div className="d-text">
                   <h5 className="d-tag">Tests planning, tests execution</h5>
@@ -61,7 +63,7 @@ const Portfolio = function () {
             data-aos="fade-up"
             data-aos-once="true"
           >
-            <a href="https://marcinkapturski.com/#/portfolio/mobile-automation">
+            <a href="#/portfolio/mobile-automation">
               <div className="card-image-1">
                 <div className="d-text">
                   <h5 className="d-tag">
@@ -77,14 +79,42 @@ const Portfolio = function () {
             data-aos="fade-up"
             data-aos-once="true"
           >
-            <a href="https://marcinkapturski.com/#/portfolio/ci-github-gitlab-automation">
+            <a href="#/portfolio/ci-github-gitlab-automation">
               <div className="card-image-1">
                 <div className="d-text">
                   <h5 className="d-tag">
                     CI configuration on GitHub Actions, GitLab
                   </h5>
                 </div>
-                <Image src={ciImg} className={" "} alt={"gallery"} />
+                <Image src={testRun} className={" "} alt={"gallery"} />
+              </div>
+            </a>
+          </div>
+          <div
+            className="col-lg-4 image-element-class de_modal de_modal"
+            data-aos="fade-up"
+            data-aos-once="true"
+          >
+            <a href="#/portfolio/peripheral-tools">
+              <div className="card-image-1">
+                <div className="d-text">
+                  <h5 className="d-tag">Peripheral tools</h5>
+                </div>
+                <Image src={peripheral} className={" "} alt={"gallery"} />
+              </div>
+            </a>
+          </div>
+          <div
+            className="col-lg-4 image-element-class de_modal de_modal"
+            data-aos="fade-up"
+            data-aos-once="true"
+          >
+            <a href="#/portfolio/test-run-reports">
+              <div className="card-image-1">
+                <div className="d-text">
+                  <h5 className="d-tag">Automation Tests Reports</h5>
+                </div>
+                <Image src={reporting} className={" "} alt={"gallery"} />
               </div>
             </a>
           </div>
