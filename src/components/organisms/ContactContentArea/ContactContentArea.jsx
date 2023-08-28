@@ -27,10 +27,10 @@ const ContactContentArea = () => {
                   <div className="spacer-double"></div>
                   <blockquote className="q-big">
                     If you need to test your software in order to meet the
-                    highest quality standards, contact me
+                    highest quality standards, contact me.
                     <br />
-                    Let's talk about the solutions and benefits that my work can
-                    provide
+                    Let's talk about the solutions and benefits that I can
+                    provide.
                   </blockquote>
                 </div>
               </div>
