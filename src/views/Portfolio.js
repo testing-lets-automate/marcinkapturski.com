@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 import { useParams } from "react-router-dom";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { tomorrow } from "react-syntax-highlighter/dist/esm/styles/prism";
@@ -78,6 +79,13 @@ const PortfolioPage = () => {
       ) : (
         portfolio && (
           <>
+            <Helmet>
+              <title>Showcase | {portfolio.title}</title>
+              <meta
+                name="description"
+                content={portfolio.metaPageDescription}
+              />
+            </Helmet>
             <div className="home">
               <Preloader />
               <HeaderPost />
@@ -119,6 +127,7 @@ query getPostSinglePost($slug: String!) {
     body {
       value
     }
+    metaPageDescription
   }
 }
 `;

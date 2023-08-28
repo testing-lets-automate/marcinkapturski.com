@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 import { useParams } from "react-router-dom";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { tomorrow } from "react-syntax-highlighter/dist/esm/styles/prism";
@@ -78,6 +79,10 @@ const PostPage = () => {
       ) : (
         post && (
           <>
+            <Helmet>
+              <title>{post.title}</title>
+              <meta name="description" content={post.metaPageDescription} />
+            </Helmet>
             <div className="home">
               <Preloader />
               <HeaderPost />
@@ -141,6 +146,7 @@ query getPostSinglePost($slug: String!) {
     id
     title
     slug
+    metaPageDescription
     body {
       value
     }

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-
+import { Helmet } from "react-helmet";
 import client from "../client.js";
 import Preloader from "components/organisms/Preloader/Preloader";
 import Header from "components/organisms/Header/Header";
@@ -34,6 +34,16 @@ function StartPage() {
 
   return (
     <section>
+      <Helmet>
+        <title>
+          About automation tests in Software Development | Freelance Test
+          Automation Engineer
+        </title>
+        <meta
+          name="description"
+          content="Freelance Test Automation Engineer | Cypress, Github Actions, SlackBot, Test planning, Mobile Automation with Appium "
+        />
+      </Helmet>
       {isFetching ? (
         <h2>Loading...</h2>
       ) : (
@@ -69,7 +79,7 @@ const query = `
     coverImage {
       url
     }
-    
+    metaPageDescription
   }
 }
 `;
