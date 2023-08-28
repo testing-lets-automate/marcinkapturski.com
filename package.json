@@ -60,6 +60,7 @@
     "react-cool-onclickoutside": "^1.7.0",
     "react-countup": "^6.3.0",
     "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0",
     "react-masonry-component": "^6.3.0",
     "react-modal-image": "^2.5.0",
     "react-move": "^6.5.0",
