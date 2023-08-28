@@ -5,10 +5,10 @@ import Heading from "components/atoms/Heading/Heading";
 import Image from "components/atoms/Image/Image";
 import automationImg from "../../../assets/start-portfolio-pictures/ui-api-automation.png";
 import mobileImg from "../../../assets/start-portfolio-pictures/mobile-automation.png";
-import testingStrategy from "../../../assets/start-portfolio-pictures/testing-strategy.png";
-import testRun from "../../../assets/start-portfolio-pictures/test-running.png";
+import testingStrategy from "../../../assets/start-portfolio-pictures/test-env-strategy.png";
+import testRun from "../../../assets/start-portfolio-pictures/run.png";
 import peripheral from "../../../assets/start-portfolio-pictures/peripheral-assets.png";
-import reporting from "../../../assets/start-portfolio-pictures/reporting.png";
+import reporting from "../../../assets/start-portfolio-pictures/report.png";
 
 import AOS from "aos";
 AOS.init();
@@ -27,7 +27,7 @@ const Portfolio = function () {
         <GlobalStyles />
         <div className="spacer-double"></div>
         <div className="spacer-double"></div>
-        <Heading text="Portfolio" />
+        <Heading text="Portfolio / Showcase" />
         <div className="spacer-single"></div>
         <Masonry className={"row my-gallery-class"} elementType={"div"}>
           <div
@@ -38,7 +38,7 @@ const Portfolio = function () {
             <a href="#/portfolio/ui-api-automation">
               <div className="card-image-1">
                 <div className="d-text">
-                  <h5 className="d-tag">Automation tests with Cypress tool</h5>
+                  <h5 className="d-tag">Automation tests with Cypress</h5>
                 </div>
                 <Image src={automationImg} className={" "} alt={"gallery"} />
               </div>
@@ -49,10 +49,12 @@ const Portfolio = function () {
             data-aos="fade-up"
             data-aos-once="true"
           >
-            <a href="#/portfolio/test-planning-tests-execution">
+            <a href="#/portfolio/testing-strategy">
               <div className="card-image-1">
                 <div className="d-text">
-                  <h5 className="d-tag">Tests planning, tests execution</h5>
+                  <h5 className="d-tag">
+                    Optimal Testing Strategy for different projects
+                  </h5>
                 </div>
                 <Image src={testingStrategy} className={" "} alt={"gallery"} />
               </div>
@@ -67,7 +69,7 @@ const Portfolio = function () {
               <div className="card-image-1">
                 <div className="d-text">
                   <h5 className="d-tag">
-                    Run tests by Appium on iOS & Android
+                    Automation tests for iOS & Android devices
                   </h5>
                 </div>
                 <Image src={mobileImg} className={" "} alt={"gallery"} />
@@ -79,11 +81,12 @@ const Portfolio = function () {
             data-aos="fade-up"
             data-aos-once="true"
           >
-            <a href="#/portfolio/ci-github-gitlab-automation">
+            <a href="#/portfolio/run-tests">
               <div className="card-image-1">
                 <div className="d-text">
                   <h5 className="d-tag">
-                    CI configuration on GitHub Actions, GitLab
+                    Run tests on different platforms like: GitHub Actions,
+                    GitLab
                   </h5>
                 </div>
                 <Image src={testRun} className={" "} alt={"gallery"} />
@@ -98,7 +101,9 @@ const Portfolio = function () {
             <a href="#/portfolio/peripheral-tools">
               <div className="card-image-1">
                 <div className="d-text">
-                  <h5 className="d-tag">Peripheral tools</h5>
+                  <h5 className="d-tag">
+                    Testing SlackBot for running tests and report
+                  </h5>
                 </div>
                 <Image src={peripheral} className={" "} alt={"gallery"} />
               </div>
@@ -109,10 +114,12 @@ const Portfolio = function () {
             data-aos="fade-up"
             data-aos-once="true"
           >
-            <a href="#/portfolio/test-run-reports">
+            <a href="#/portfolio/test-reporting">
               <div className="card-image-1">
                 <div className="d-text">
-                  <h5 className="d-tag">Automation Tests Reports</h5>
+                  <h5 className="d-tag">
+                    XRay & TestRail integration, HTML reports
+                  </h5>
                 </div>
                 <Image src={reporting} className={" "} alt={"gallery"} />
               </div>
