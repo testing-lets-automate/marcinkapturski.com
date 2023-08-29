@@ -13,15 +13,20 @@ import ScrollToTop from "components/organisms/ScrollToTop/ScrollToTop";
 import Footer from "components/organisms/Footer/Footer";
 
 function StartPage() {
-  const [posts, setPost] = useState([]);
+  const [posts, setPosts] = useState([]);
+  const [pageTitle, setPageTitle] = useState("");
+  const [pageDescription, setPageDescription] = useState("");
   const [isFetching, setIsFetching] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const posts = await client.request(query);
-        const blogComponentData = posts.allPosts;
-        setPost(blogComponentData);
+        const { allPosts, _site } = await client.request(query);
+        const { title, description } = _site.globalSeo.fallbackSeo;
+
+        setPosts(allPosts);
+        setPageTitle(title);
+        setPageDescription(description);
         setIsFetching(false);
       } catch (error) {
         console.error(JSON.stringify(error, undefined, 2));
@@ -35,14 +40,8 @@ function StartPage() {
   return (
     <section>
       <Helmet>
-        <title>
-          About automation tests in Software Development | Freelance Test
-          Automation Engineer
-        </title>
-        <meta
-          name="description"
-          content="Freelance Test Automation Engineer | Cypress, Github Actions, SlackBot, Test planning, Mobile Automation with Appium "
-        />
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
       </Helmet>
       {isFetching ? (
         <h2>Loading...</h2>
@@ -70,17 +69,25 @@ function StartPage() {
 
 const query = `
 {
-  allPosts {
-    id
-    title
-    slug
-    createdAt
-    introduction
-    coverImage {
-      url
+  _site {
+  globalSeo {
+    fallbackSeo {
+      title
+      description        
     }
-    metaPageDescription
   }
+}
+allPosts {
+  id
+  title
+  slug
+  createdAt
+  introduction
+  coverImage {
+    url
+  }
+  metaPageDescription
+}
 }
 `;
 
