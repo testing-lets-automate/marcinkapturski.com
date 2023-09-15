@@ -48,8 +48,7 @@ const Blog = ({ posts }) => {
             solutions for challenges I had the pleasure to face. The thorough
             illustration of my concepts and capabilities.
           </blockquote>
-          <div className="spacer-double"></div>
-          <div className="spacer-double"></div>
+          <div className="spacer-single"></div>
         </div>
         <div className="row" data-aos="fade-up" data-aos-once="true">
           {isSliderInitialized ? (

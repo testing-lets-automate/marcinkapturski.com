@@ -32,7 +32,7 @@ const Hero = () => {
               data-aos-once="true"
             ></div>
             <button className="btn-main mt-3">
-              <Link to="whatido">
+              <Link to="service">
                 <Typed
                   strings={["See What I Offer"]}
                   typeSpeed={10}

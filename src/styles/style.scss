@@ -556,6 +556,7 @@ blockquote.q-big .d-big {
     margin: 10px;
     transition: .5s;
     outline: none;
+    border-radius: 15px;
     .d-text {
       color: #ffffff;
       position: absolute;
@@ -1031,6 +1032,10 @@ h3.s_border {
     transition: .5s;
     box-shadow: 2px 2px 20px 0px rgba(var(--primary-color-rgb), 0.5);
   }
+}
+.btn-main a {
+  color: #fff;
+  text-decoration: none;
 }
 #success, #failed{
   color: $color;

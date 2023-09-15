@@ -35,7 +35,7 @@ const Header = function () {
             <ul className="navbar-nav" data-testid="navigation-panel">
               <NavigationItem name="Home page" section="hero-area" />
               <NavigationItem name="What I do" section="whatido" />
-              <NavigationItem name="Portfolio" section="portfolio" />
+              <NavigationItem name="Service" section="service" />
               <NavigationItem name="Blog" section="blog" />
               <NavigationItem name="Contact" section="contact" />
             </ul>
@@ -45,7 +45,7 @@ const Header = function () {
               <ul className="navbar-nav mr-auto w-100 justify-content-end clearfix">
                 <NavigationItem name="Home page" section="hero-area" />
                 <NavigationItem name="What I do" section="whatido" />
-                <NavigationItem name="Portfolio" section="portfolio" />
+                <NavigationItem name="Service" section="service" />
                 <NavigationItem name="Blog" section="blog" />
                 <NavigationItem name="Contact" section="contact" />
               </ul>

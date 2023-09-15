@@ -21,6 +21,7 @@ const ContactContentArea = () => {
             <div className="container">
               <div className="spacer-double"></div>
               <div className="spacer-double"></div>
+              <div className="spacer-double"></div>
               <Heading text="Contact" />
               <div className="row align-items-center">
                 <div className="col-md-10 offset-md-1">
