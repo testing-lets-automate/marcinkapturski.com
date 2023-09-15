@@ -5,7 +5,7 @@ import Preloader from "components/organisms/Preloader/Preloader";
 import Header from "components/organisms/Header/Header";
 import SocialIcons from "components/atoms/SocialIcons/SocialIcons";
 import HeroArea from "components/organisms/HeroArea/HeroArea";
-import Portfolio from "components/organisms/Portfolio/Portfolio.jsx";
+import Service from "components/organisms/Service/Service.jsx";
 import WhatIDoContentArea from "components/organisms/WhatIDoContentArea/WhatIDoContentArea.jsx";
 import Blog from "components/organisms/Blog/Blog";
 import ContactContentArea from "components/organisms/ContactContentArea/ContactContentArea.jsx";
@@ -53,7 +53,7 @@ function StartPage() {
               <Header />
               <HeroArea />
               <WhatIDoContentArea />
-              <Portfolio />
+              <Service />
               <ContactContentArea />
               <Blog posts={posts} />
               <Footer />
