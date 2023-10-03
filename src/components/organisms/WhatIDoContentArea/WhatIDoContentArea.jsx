@@ -77,8 +77,7 @@ const WhatIDoContentArea = () => {
                   </p>
                   <p>
                     <b>Multi-environment Support</b> - Executing the same tests
-                    across various environments (including DEV, STAGING, and
-                    PRE-PROD).
+                    across various environments.
                   </p>
                   <p>
                     <b>Multi-User Functionality</b> - Utilizing a diverse set of

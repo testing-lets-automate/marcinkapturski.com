@@ -13,23 +13,30 @@ AOS.init();
 const Contact = () => {
   function sendEmail(e) {
     const success = document.getElementById("success");
-    // const button = document.getElementById("send_message");
-    // const failed = document.getElementById("failed");
+    const button = document.getElementById("send_message");
+    const failed = document.getElementById("failed");
     e.preventDefault();
 
-    emailjs.sendForm("service", "template", e.target, "target_token").then(
-      (result) => {
-        console.log(result.text);
-        success.classList.add("show");
-        window.location.reload();
-        // button.classList.add("show");
-        // failed.classList.remove("show");
-      },
-      (error) => {
-        console.log(error.text);
-        // failed.classList.add("show");
-      }
-    );
+    emailjs
+      .sendForm(
+        "service_aspqawq",
+        "template_31g0b3c",
+        e.target,
+        "tfGmpkL9Lhkl-cmnY"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          success.classList.add("show");
+          window.location.reload();
+          button.classList.add("show");
+          failed.classList.remove("show");
+        },
+        (error) => {
+          console.log(error.text);
+          failed.classList.add("show");
+        }
+      );
   }
 
   return (
@@ -69,7 +76,7 @@ const Contact = () => {
                           <Input
                             name="Email"
                             id="email"
-                            placeholder="Your e-mail address"
+                            placeholder="Your e-mail"
                           />
                         </div>
                       </div>
@@ -78,7 +85,7 @@ const Contact = () => {
                           <Input
                             name="Phone"
                             id="phone"
-                            placeholder="Your phone number"
+                            placeholder="Your mobile"
                           />
                         </div>
                       </div>
@@ -91,7 +98,7 @@ const Contact = () => {
 
                     <div className="text-center">
                       <Text id="success" text="Your message has been sent..." />
-                      <Text id="success" text="Sending failed..." />
+                      <Text id="failed" text="Sending failed..." />
 
                       <ButtonSubmit
                         type={"submit"}

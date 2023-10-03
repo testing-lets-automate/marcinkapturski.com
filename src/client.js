@@ -1,6 +1,6 @@
 import { GraphQLClient } from "graphql-request";
 
-const apiToken = process.env.DATOCMS_API_TOKEN;
+const apiToken = "07fd84e7daf79ac61cece230ae9b59";
 const endpoint = `https://graphql.datocms.com`;
 const headers = {
   Accept: "application/json",
