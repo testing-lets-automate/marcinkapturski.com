@@ -44,9 +44,9 @@ const Blog = ({ posts }) => {
           data-aos-once="true"
         >
           <blockquote className="q-big">
-            This blog is as an extension of my portfolio and a collection of
-            solutions for challenges I had the pleasure to face. The thorough
-            illustration of my concepts and capabilities.
+            This blog is a collection of solutions for challenges I had the
+            pleasure to face. The thorough illustration of my concepts and
+            capabilities.
           </blockquote>
           <div className="spacer-single"></div>
         </div>
@@ -82,7 +82,6 @@ const Blog = ({ posts }) => {
           ) : null}
         </div>
       </div>
-      <div className="spacer-double"></div>
       <div className="spacer-double"></div>
     </section>
   );
