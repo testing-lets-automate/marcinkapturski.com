@@ -11,9 +11,10 @@ Feature: Navigation links are visible and performing actions
 
     Examples:
       | navigation_item | position |
-      | What I Do       | 10       |
-      | Work with me    | 18       |
-      | Contact         | 16       |
+      | Home page       | 10       |
+      | About me        | 18       |
+      | What I do       | 16       |
+      | Blog            | 34       |
 
   @regression
   Scenario: ScrollToTheTop button is scrolling page to the top

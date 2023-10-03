@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Burgermenu from "components/atoms/Buttons/Burgermenu/Burgermenu";
 import Logo from "components/molecules/Logo/Logo";
+import Typed from "react-typed";
+import { Link } from "react-scroll";
 import NavigationItem from "components/molecules/NavigationItem/NavigationItem";
 
 const Header = function () {
@@ -34,21 +36,46 @@ const Header = function () {
           <div className="dekstopmenu">
             <ul className="navbar-nav" data-testid="navigation-panel">
               <NavigationItem name="Home page" section="hero-area" />
+              <NavigationItem name="About Me" section="aboutme" />
               <NavigationItem name="What I do" section="whatido" />
-              <NavigationItem name="Service" section="service" />
               <NavigationItem name="Blog" section="blog" />
               <NavigationItem name="Contact" section="contact" />
             </ul>
+            <button className="btn-main mt-3">
+              {/* <a href="#/contact">
+                <Typed
+                  strings={["Get Free Consultation"]}
+                  typeSpeed={10}
+                  className="hero-button"
+                />
+              </a> */}
+              <Link to="contact">
+                <Typed
+                  strings={["Get Free Consultation"]}
+                  typeSpeed={60}
+                  className="hero-button"
+                />
+              </Link>
+            </button>
           </div>
           {showmenu && (
             <div className="mobilemenu">
               <ul className="navbar-nav mr-auto w-100 justify-content-end clearfix">
                 <NavigationItem name="Home page" section="hero-area" />
+                <NavigationItem name="About Me" section="aboutme" />
                 <NavigationItem name="What I do" section="whatido" />
-                <NavigationItem name="Service" section="service" />
                 <NavigationItem name="Blog" section="blog" />
                 <NavigationItem name="Contact" section="contact" />
               </ul>
+              <button className="btn-main mt-3">
+                <a href="#/contact">
+                  <Typed
+                    strings={["Get Free Consultation"]}
+                    typeSpeed={10}
+                    className="hero-button"
+                  />
+                </a>
+              </button>
             </div>
           )}
           <Burgermenu btn_icon={btn_icon} showmenu={showmenu} />

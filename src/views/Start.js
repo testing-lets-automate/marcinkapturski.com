@@ -5,12 +5,14 @@ import Preloader from "components/organisms/Preloader/Preloader";
 import Header from "components/organisms/Header/Header";
 import SocialIcons from "components/atoms/SocialIcons/SocialIcons";
 import HeroArea from "components/organisms/HeroArea/HeroArea";
-import Service from "components/organisms/Service/Service.jsx";
+import AboutMeContentArea from "components/organisms/AboutMeContentArea/AboutMeContentArea";
 import WhatIDoContentArea from "components/organisms/WhatIDoContentArea/WhatIDoContentArea.jsx";
 import Blog from "components/organisms/Blog/Blog";
 import ContactContentArea from "components/organisms/ContactContentArea/ContactContentArea.jsx";
 import ScrollToTop from "components/organisms/ScrollToTop/ScrollToTop";
 import Footer from "components/organisms/Footer/Footer";
+import IconsSlider from "components/organisms/IconsSlider/IconsSlider.jsx";
+import Counter from "components/organisms/Counter/Counter.jsx";
 
 function StartPage() {
   const [posts, setPosts] = useState([]);
@@ -52,10 +54,12 @@ function StartPage() {
               <Preloader />
               <Header />
               <HeroArea />
+              <AboutMeContentArea />
+              <Counter />
+              <IconsSlider />
               <WhatIDoContentArea />
-              <Service />
-              <ContactContentArea />
               <Blog posts={posts} />
+              <ContactContentArea />
               <Footer />
               <SocialIcons text="GitHub" />
             </div>

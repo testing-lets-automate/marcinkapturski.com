@@ -1,6 +1,11 @@
 import React from "react";
 import Heading from "components/atoms/Heading/Heading";
 import AOS from "aos";
+import Image from "components/atoms/Image/Image";
+import uiapiautomation from "../../../assets/blank_img.png";
+import mobileautomation from "../../../assets/blank_img.png";
+import testplanning from "../../../assets/blank_img.png";
+
 AOS.init();
 
 const WhatIDoContentArea = () => {
@@ -20,15 +25,158 @@ const WhatIDoContentArea = () => {
           data-aos-once="true"
         >
           <blockquote className="q-big">
-            I ensure the technology meets high-quality standards. I have a
-            proven track record of developing automation tests and test
-            strategies performed manually and automatically.
+            I ensure the technology meets high-quality standards. <br />
+            Let's talk about the solutions and benefits that I can provide
           </blockquote>
           <div className="spacer-double"></div>
+          <div className="spacer-double"></div>
         </div>
+
         <div className="row">
           <div
-            className="col-lg-4"
+            className="col-lg-4 text-center m-auto"
+            data-aos="fade"
+            data-aos-delay="300"
+            data-aos-duration="1000"
+            data-aos-easing="ease"
+            data-aos-once="true"
+          >
+            <div className="de_2d-box">
+              <div className="d-inner">
+                <div className="text">
+                  <div className="d-inner">
+                    <div className="card-image-1">
+                      <Image
+                        src={uiapiautomation}
+                        className={" "}
+                        alt={"gallery"}
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="col-lg-4 text-left m-auto"
+            data-aos="fade"
+            data-aos-delay="400"
+            data-aos-duration="1000"
+            data-aos-easing="ease"
+            data-aos-once="true"
+          >
+            <div className="de_2d-box">
+              <div className="d-inner">
+                <div className="text">
+                  I'll assist you with: <br />
+                  <h2>Writing UI & API Automation</h2>
+                  <p>Implementing automation tests for any WEB application.</p>
+                  <p>
+                    <b>Parallel Execution</b> - Running tests concurrently to
+                    minimize test execution time.
+                  </p>
+                  <p>
+                    <b>Multi-environment Support</b> - Executing the same tests
+                    across various environments (including DEV, STAGING, and
+                    PRE-PROD).
+                  </p>
+                  <p>
+                    <b>Multi-User Functionality</b> - Utilizing a diverse set of
+                    user profiles with unrestricted data access.
+                  </p>
+                  <p>
+                    <b>
+                      BDD (Behavior-Driven Development) with Cucumber(Gherkin)
+                    </b>{" "}
+                    - Assisting Product Owners by creating test scenarios in a
+                    human-readable language.
+                  </p>
+                  <p>
+                    <b>Presenting Results on a Dashboard</b> - Access to my
+                    custom application, provided to you free of charge.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="spacer-double"></div>
+        <div className="spacer-double"></div>
+        <div className="spacer-double"></div>
+
+        <div className="row">
+          <div
+            className="col-lg-4 text-left m-auto"
+            data-aos="fade"
+            data-aos-delay="300"
+            data-aos-duration="1000"
+            data-aos-easing="ease"
+            data-aos-once="true"
+          >
+            <div className="de_2d-box">
+              <div className="d-inner">
+                <div className="text">
+                  <div className="d-inner">
+                    <div className="text">
+                      I'll assist you with: <br />
+                      <h2>iOS & Android Mobile Automation</h2>
+                      <p>
+                        Implementing automation tests for iOS and Android apps,
+                        utilizing real devices provided by<b> BrowserStack</b>{" "}
+                        or
+                        <b> LambdaTest</b>.
+                      </p>
+                      <p>
+                        <b>Cucumber(Gherkin) or Mocka tests </b> - You have the
+                        flexibility to select the format, whether it's
+                        traditional or with support for non-technical team
+                        members.
+                      </p>
+                      <p>
+                        <b>Flexible Test Execution</b> - Run the tests in
+                        various modes, including on pull-request, on-demand, or
+                        typically during regression.
+                      </p>
+                      <p>
+                        <b>Seamless App Center Integration</b> - Directly access
+                        apps from Microsoft's App Center.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="col-lg-4 text-left m-auto"
+            data-aos="fade"
+            data-aos-delay="400"
+            data-aos-duration="1000"
+            data-aos-easing="ease"
+            data-aos-once="true"
+          >
+            <div className="de_2d-box">
+              <div className="d-inner">
+                <div className="card-image-1">
+                  <Image
+                    src={mobileautomation}
+                    className={" "}
+                    alt={"gallery"}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="spacer-double"></div>
+        <div className="spacer-double"></div>
+        <div className="spacer-double"></div>
+
+        <div className="row">
+          <div
+            className="col-lg-6"
             data-aos="fade"
             data-aos-delay="300"
             data-aos-duration="1000"
@@ -37,97 +185,69 @@ const WhatIDoContentArea = () => {
           >
             <div className="de_3d-box">
               <div className="d-inner">
-                <div className="text">
-                  <h3>Web & API automation</h3>I am writing WEB & API tests,
-                  mostly with{" "}
-                  <a
-                    className="link_black"
-                    target="_blank"
-                    rel="noreferrer"
-                    href="https://www.cypress.io"
-                  >
-                    Cypress tool
-                  </a>{" "}
-                  and support of{" "}
-                  <a
-                    className="link_black"
-                    target="_blank"
-                    rel="noreferrer"
-                    href="https://docs.github.com/en/actions/quickstart"
-                  >
-                    GitHub Actions
-                  </a>{" "}
-                  by runing them in different ways and on many environments
+                <div className="card-image-1">
+                  <Image src={testplanning} className={" "} alt={"gallery"} />
                 </div>
               </div>
             </div>
           </div>
           <div
-            className="col-lg-4"
+            className="col-lg-6 text-right m-auto"
             data-aos="fade"
             data-aos-delay="400"
             data-aos-duration="1000"
             data-aos-easing="ease"
             data-aos-once="true"
           >
-            <div className="de_3d-box">
+            <div className="de_2d-box">
               <div className="d-inner">
                 <div className="text">
-                  <h3>Mobile automation tests</h3>
-                  Changes in software development inspired me to start
-                  supporting mobile automation ( iOS / Android ) with{" "}
-                  <a
-                    className="link_black"
-                    target="_blank"
-                    rel="noreferrer"
-                    href="http://appium.io"
-                  >
-                    Appium
-                  </a>
-                  ,
-                  <a
-                    className="link_black"
-                    target="_blank"
-                    rel="noreferrer"
-                    href="https://www.browserstack.com"
-                  >
-                    {" "}
-                    Browserstack
-                  </a>{" "}
-                  or
-                  <a
-                    className="link_black"
-                    target="_blank"
-                    rel="noreferrer"
-                    href="https://www.lambdatest.com"
-                  >
-                    {" "}
-                    Lambdatest
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            className="col-lg-4"
-            data-aos="fade"
-            data-aos-delay="500"
-            data-aos-duration="1000"
-            data-aos-easing="ease"
-            data-aos-once="true"
-          >
-            <div className="de_3d-box">
-              <div className="d-inner">
-                <div className="text">
-                  <h3>Developing test strategies</h3>
-                  Well-written tests require proper planning <br />I specialize
-                  in comprehensive software testing planning and crafting
-                  practical testing concepts
+                  I'll assist you with: <br />
+                  <h2>Test planning, developing test strategies</h2>
+                  <p>
+                    <b>Well-written tests require proper planning</b> - I
+                    specialize in comprehensive software testing planning for
+                    both web and mobile software development
+                  </p>
+                  <p>
+                    This includes{" "}
+                    <ul>
+                      <li>
+                        <b>
+                          functionality review aligned with defined requirements
+                        </b>
+                      </li>
+                      <li>
+                        <b>A deep dive into business processes</b>
+                      </li>
+                      <li>
+                        <b>Analysis of project risks</b>
+                      </li>
+                    </ul>
+                  </p>
+                  <p>
+                    The result is a meticulously designed plan executed in the
+                    form of
+                    <br />
+                    <b> Regression Tests </b> - Ensuring comprehensive test
+                    coverage
+                    <br />
+                    <b>End-to-End (E2E) Tests </b> - Verifying functionalities
+                    from start to finish.
+                    <br />
+                    <b>Smoke Tests </b> - Assessing the core system functions.
+                    <br />
+                    <b>Integration Tests </b> - Validating interactions between
+                    components or applications.
+                  </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
+        <div className="spacer-double"></div>
+        <div className="spacer-double"></div>
       </div>
     </section>
   );

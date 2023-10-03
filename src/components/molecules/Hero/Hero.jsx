@@ -1,8 +1,6 @@
 import React from "react";
-import { Link } from "react-scroll";
 import Image from "components/atoms/Image/Image";
 import face from "../../../assets/banner_image.png";
-import Typed from "react-typed";
 import AOS from "aos";
 
 AOS.init({
@@ -21,7 +19,8 @@ const Hero = () => {
           <div className="col-md-6">
             <div className="spacer-20"></div>
             <div className="h1_big">
-              Hi, I'm a Freelance Test Automation Engineer.
+              Hi, I'm a Freelance Test Automation Engineer with over 19 years of
+              experience.
             </div>
             <div
               className="h1_big"
@@ -31,15 +30,6 @@ const Hero = () => {
               data-aos-easing="ease"
               data-aos-once="true"
             ></div>
-            <button className="btn-main mt-3">
-              <Link to="service">
-                <Typed
-                  strings={["See What I Offer"]}
-                  typeSpeed={10}
-                  className="hero-button"
-                />
-              </Link>
-            </button>
           </div>
 
           <div className="col-md-6">
