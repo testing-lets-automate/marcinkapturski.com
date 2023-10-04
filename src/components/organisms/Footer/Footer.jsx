@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="container">
           <div className="row">
             <div className="col-md-6">
-              <span className="footer-text">
+              <span className="footer-text-copyright">
                 &copy; Copyright 2023 - Marcin Kapturski
               </span>
             </div>
