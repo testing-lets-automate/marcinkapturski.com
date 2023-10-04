@@ -42,20 +42,13 @@ const Header = function () {
               <NavigationItem name="Contact" section="contact" />
             </ul>
             <button className="btn-main mt-3">
-              {/* <a href="#/contact">
+              <a href="#/contact">
                 <Typed
                   strings={["Get Free Consultation"]}
                   typeSpeed={10}
                   className="hero-button"
                 />
-              </a> */}
-              <Link to="contact">
-                <Typed
-                  strings={["Get Free Consultation"]}
-                  typeSpeed={60}
-                  className="hero-button"
-                />
-              </Link>
+              </a>
             </button>
           </div>
           {showmenu && (
@@ -68,20 +61,13 @@ const Header = function () {
                 <NavigationItem name="Contact" section="contact" />
               </ul>
               <button className="btn-main mt-3">
-                {/* <a href="#/contact">
-                <Typed
-                  strings={["Get Free Consultation"]}
-                  typeSpeed={10}
-                  className="hero-button"
-                />
-              </a> */}
-                <Link to="contact">
+                <a href="#/contact">
                   <Typed
                     strings={["Get Free Consultation"]}
-                    typeSpeed={60}
+                    typeSpeed={10}
                     className="hero-button"
                   />
-                </Link>
+                </a>
               </button>
             </div>
           )}
