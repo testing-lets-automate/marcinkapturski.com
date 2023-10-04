@@ -966,15 +966,41 @@ h3.s_border {
 }
 
 /* contact */
+.form_wrapper #contact_form{
+  background-color: #fff;
+  padding: 60px;
+  float: left;
+  border: 1px solid   #dadada;
+  border-radius:15px;
+  font-weight: 600;
+  float: left;
+}
+
+.form_wrapper #name {
+  font-size: 12px;
+}
+
+.form_wrapper #email {
+  font-size: 12px;
+}
+
+.form_wrapper #phone {
+  font-size: 12px;
+}
+
+.form_wrapper #message {
+  font-size: 14px;
+}
+
 .form-control {
   display: block;
   width: 100%;
   padding: .375rem .75rem;
-  font-size: 1rem;
+  font-size: 12px;
   font-weight: 400;
   line-height: 1.5;
-  color: #fff;
-  background-color: #fff;
+  color: #000;
+  // background-color: #fff;
   background-clip: padding-box;
   border: 1px solid #ced4da;
   -webkit-appearance: none;
@@ -1149,6 +1175,11 @@ footer {
   }
   .footer-text {
     font-size: 14px;
+    float: right;
+  }
+  .footer-text-copyright {
+    font-size: 14px;
+    float: left;
   }
   .footer-link {
     font-size: 14px;
