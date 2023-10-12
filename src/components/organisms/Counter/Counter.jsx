@@ -80,7 +80,7 @@ const Counter = () => {
                       />
                     </h3>
                     <span>
-                      <b>worldwide Clients Engagement</b>
+                      <b>worldwide clients</b>
                     </span>
                   </div>
                 </div>

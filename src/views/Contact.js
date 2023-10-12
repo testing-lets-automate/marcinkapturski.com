@@ -78,23 +78,31 @@ const ContactPage = () => {
                             <div className="d-inner">
                               <div className="text">
                                 <p>
-                                  <b>Ask us any questions.</b> <br />
-                                  You'll be amazed by our knowledge of software
-                                  testing and development.
+                                  <b>Feel free to ask me anything!</b> <br />
+                                  You'll be impressed by my expertise in
+                                  software testing and development.
                                 </p>
                                 <p>
                                   <b>
-                                    Provide me with some context about the
-                                    technologies you're using, the tools in your
-                                    toolkit, and your requirements for test
-                                    planning and automation.
+                                    Share some insights into the technologies
+                                    you use, your toolkit, and your expectations
+                                    for test planning and automation.
                                   </b>
                                 </p>
-                                <p>
-                                  Our free consultation is dedicated to
-                                  companies with at least 5 team members, where
-                                  our expertise shines the brightest.
-                                </p>
+                                <div className="text">
+                                  <div className="skill-box">
+                                    19 years of profesional experience
+                                  </div>
+                                  <div className="skill-box">
+                                    640 automation tests from this year
+                                  </div>
+                                  <div className="skill-box">
+                                    26 successful projects
+                                  </div>
+                                  <div className="skill-box">
+                                    12 worldwide clients
+                                  </div>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -201,7 +209,7 @@ const ContactPage = () => {
             </div>
           </div>
           <Footer />
-          <SocialIcons text="GitHub" />
+          <SocialIcons text="Follow Me" />
         </div>
         <ScrollToTop />
       </>

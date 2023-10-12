@@ -61,7 +61,7 @@ function StartPage() {
               <Blog posts={posts} />
               <ContactContentArea />
               <Footer />
-              <SocialIcons text="GitHub" />
+              <SocialIcons text="Follow Me" />
             </div>
             <ScrollToTop />
           </>
