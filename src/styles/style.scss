@@ -219,13 +219,22 @@ h2 {
   }
 }
 .skill-pix {
-  border: 1px solid  #000;
+  border: 1px dashed #000;
   border-radius:15px;
   font-weight: 600;
   float: left;
   padding: auto;
   margin: 0px 10px 10px 10px;
   padding: 5px 10px 5px 10px;
+}
+.skill-box {
+  border: 1px dashed #000;
+  font-weight: 600;
+  float: left;
+  padding: auto;
+  margin: 0px 10px 10px 0px;
+  padding: 5px 10px 5px 10px;
+  clear: both;
 }
 section, .section{
   position: relative;
@@ -815,7 +824,7 @@ h3.s_border {
 }
 .d_timeline-text {
   margin: 0;
-  padding: 0 0 40px 40px;
+  padding: 10px 0 10px 40px;
   .d_title {
     font-family: var(--title-font);
     font-weight: 700;

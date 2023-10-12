@@ -35,7 +35,7 @@ const Header = function () {
           <Logo />
           <div className="dekstopmenu">
             <ul className="navbar-nav" data-testid="navigation-panel">
-              <NavigationItem name="Home page" section="hero-area" />
+              <NavigationItem name="Start" section="hero-area" />
               <NavigationItem name="About Me" section="aboutme" />
               <NavigationItem name="What I do" section="whatido" />
               <NavigationItem name="Blog" section="blog" />
@@ -54,7 +54,7 @@ const Header = function () {
           {showmenu && (
             <div className="mobilemenu">
               <ul className="navbar-nav mr-auto w-100 justify-content-end clearfix">
-                <NavigationItem name="Home page" section="hero-area" />
+                <NavigationItem name="Start" section="hero-area" />
                 <NavigationItem name="About Me" section="aboutme" />
                 <NavigationItem name="What I do" section="whatido" />
                 <NavigationItem name="Blog" section="blog" />

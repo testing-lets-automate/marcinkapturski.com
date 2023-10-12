@@ -2,10 +2,8 @@ import React from "react";
 import Heading from "components/atoms/Heading/Heading";
 import AOS from "aos";
 import Image from "components/atoms/Image/Image";
-import uiapiautomation from "../../../assets/blank_img.png";
-import mobileautomation from "../../../assets/blank_img.png";
-import testplanning from "../../../assets/blank_img.png";
-
+import uiapiautomation from "../../../assets/ui_api.png";
+import mobileautomation from "../../../assets/mobile.png";
 AOS.init();
 
 const WhatIDoContentArea = () => {
@@ -102,7 +100,6 @@ const WhatIDoContentArea = () => {
 
         <div className="spacer-double"></div>
         <div className="spacer-double"></div>
-        <div className="spacer-double"></div>
 
         <div className="row">
           <div
@@ -139,7 +136,7 @@ const WhatIDoContentArea = () => {
                       </p>
                       <p>
                         <b>Seamless App Center Integration</b> - Directly access
-                        apps from Microsoft's App Center.
+                        apps from App Center.
                       </p>
                     </div>
                   </div>
@@ -171,27 +168,60 @@ const WhatIDoContentArea = () => {
 
         <div className="spacer-double"></div>
         <div className="spacer-double"></div>
-        <div className="spacer-double"></div>
 
         <div className="row">
           <div
-            className="col-lg-6"
+            className="col-lg-4 text-left m-auto"
             data-aos="fade"
             data-aos-delay="300"
             data-aos-duration="1000"
             data-aos-easing="ease"
             data-aos-once="true"
           >
-            <div className="de_3d-box">
+            <div className="de_2d-box">
               <div className="d-inner">
-                <div className="card-image-1">
-                  <Image src={testplanning} className={" "} alt={"gallery"} />
+                <div className="text">
+                  <div className="d-inner">
+                    <div className="spacer-double"></div>
+                    <ul className="d_timeline">
+                      <li className="d_timeline-item">
+                        <h3 className="d_timeline-title">
+                          Planning Test Processes:
+                        </h3>
+                        <p className="d_timeline-text">
+                          I help you plan your test processes, ensuring the use
+                          of the right tools and testing models
+                        </p>
+                      </li>
+                      <li className="d_timeline-item">
+                        <h3 className="d_timeline-title">
+                          Defining Test Scenarios
+                        </h3>
+                        <p className="d_timeline-text">
+                          I define test scenarios and group them for specific
+                          activities and testing sessions. This includes
+                          comprehensive testing types such as Regression,
+                          End-to-End (E2E), and Smoke Tests.
+                        </p>
+                      </li>
+                      <li className="d_timeline-item">
+                        <h3 className="d_timeline-title">
+                          Documenting and Executing
+                        </h3>
+                        <p className="d_timeline-text">
+                          Documentation on how the tests will be executed,
+                          Re-running and adaptation are integral parts of the
+                          process
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
           <div
-            className="col-lg-6 text-right m-auto"
+            className="col-lg-4 text-left m-auto"
             data-aos="fade"
             data-aos-delay="400"
             data-aos-duration="1000"
@@ -207,37 +237,6 @@ const WhatIDoContentArea = () => {
                     <b>Well-written tests require proper planning</b> - I
                     specialize in comprehensive software testing planning for
                     both web and mobile software development
-                  </p>
-                  <p>
-                    This includes{" "}
-                    <ul>
-                      <li>
-                        <b>
-                          functionality review aligned with defined requirements
-                        </b>
-                      </li>
-                      <li>
-                        <b>A deep dive into business processes</b>
-                      </li>
-                      <li>
-                        <b>Analysis of project risks</b>
-                      </li>
-                    </ul>
-                  </p>
-                  <p>
-                    The result is a meticulously designed plan executed in the
-                    form of
-                    <br />
-                    <b> Regression Tests </b> - Ensuring comprehensive test
-                    coverage
-                    <br />
-                    <b>End-to-End (E2E) Tests </b> - Verifying functionalities
-                    from start to finish.
-                    <br />
-                    <b>Smoke Tests </b> - Assessing the core system functions.
-                    <br />
-                    <b>Integration Tests </b> - Validating interactions between
-                    components or applications.
                   </p>
                 </div>
               </div>

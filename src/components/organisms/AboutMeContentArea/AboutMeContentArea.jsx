@@ -25,61 +25,6 @@ const AboutMeContentArea = () => {
             geographies.
             <br />
           </blockquote>
-          {/* <div className="row">
-            <div
-              className="col-lg-4"
-              data-aos="fade"
-              data-aos-delay="300"
-              data-aos-duration="1000"
-              data-aos-easing="ease"
-              data-aos-once="true"
-            >
-              <div className="de_3d-box">
-                <div className="d-inner">
-                  <div className="text">
-                    <h3>LinkedIn</h3>
-                    Here is my profile
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              className="col-lg-4"
-              data-aos="fade"
-              data-aos-delay="400"
-              data-aos-duration="1000"
-              data-aos-easing="ease"
-              data-aos-once="true"
-            >
-              <div className="de_3d-box">
-                <div className="d-inner">
-                  <div className="text">
-                    <h3>LinkedIn</h3>
-                    Here is my profile
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              className="col-lg-4"
-              data-aos="fade"
-              data-aos-delay="500"
-              data-aos-duration="1000"
-              data-aos-easing="ease"
-              data-aos-once="true"
-            >
-              <div className="de_3d-box">
-                <div className="d-inner">
-                  <div className="text">
-                    <h3>LinkedIn</h3>
-                    Here is my profile
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> */}
-
-          {/* <div className="spacer-double"></div> */}
         </div>
       </div>
     </section>
