@@ -43,6 +43,7 @@ const WhatIDoContentArea = () => {
               <div className="d-inner">
                 <div className="text">
                   <div className="d-inner">
+                    <div className="spacer-double"></div>
                     <div className="card-image-1">
                       <Image
                         src={uiapiautomation}
@@ -50,6 +51,7 @@ const WhatIDoContentArea = () => {
                         alt={"gallery"}
                       />
                     </div>
+                    <div className="spacer-double"></div>
                   </div>
                 </div>
               </div>
@@ -69,36 +71,35 @@ const WhatIDoContentArea = () => {
                   I'll assist you with: <br />
                   <h2>Writing UI & API Automation</h2>
                   <p>Implementing automation tests for any WEB application.</p>
-                  <p>
-                    <b>Parallel Execution</b> - Running tests concurrently to
+                  <div className="start-panel">
+                    <b>Parallel Execution</b> Running tests concurrently to
                     minimize test execution time.
-                  </p>
-                  <p>
-                    <b>Multi-environment Support</b> - Executing the same tests
+                  </div>
+                  <div className="start-panel">
+                    <b>Multi-environment Support</b> Executing the same tests
                     across various environments.
-                  </p>
-                  <p>
-                    <b>Multi-User Functionality</b> - Utilizing a diverse set of
+                  </div>
+                  <div className="start-panel">
+                    <b>Multi-User Functionality</b> Utilizing a diverse set of
                     user profiles with unrestricted data access.
-                  </p>
-                  <p>
+                  </div>
+                  <div className="start-panel">
                     <b>
                       BDD (Behavior-Driven Development) with Cucumber(Gherkin)
                     </b>{" "}
-                    - Assisting Product Owners by creating test scenarios in a
+                    Assisting Product Owners by creating test scenarios in a
                     human-readable language.
-                  </p>
-                  <p>
-                    <b>Presenting Results on a Dashboard</b> - Access to my
-                    custom application, provided to you free of charge.
-                  </p>
+                  </div>
+                  <div className="start-panel">
+                    <b>Presenting Results on a Dashboard</b> Access to my custom
+                    application, provided to you free of charge.
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="spacer-double"></div>
         <div className="spacer-double"></div>
 
         <div className="row">
@@ -123,21 +124,21 @@ const WhatIDoContentArea = () => {
                         or
                         <b> LambdaTest</b>.
                       </p>
-                      <p>
-                        <b>Cucumber(Gherkin) or Mocka tests </b> - You have the
+                      <div className="start-panel">
+                        <b>Cucumber(Gherkin) or Mocka tests </b> You have the
                         flexibility to select the format, whether it's
                         traditional or with support for non-technical team
                         members.
-                      </p>
-                      <p>
-                        <b>Flexible Test Execution</b> - Run the tests in
-                        various modes, including on pull-request, on-demand, or
+                      </div>
+                      <div className="start-panel">
+                        <b>Flexible Test Execution</b> Run the tests in various
+                        modes, including on pull-request, on-demand, or
                         typically during regression.
-                      </p>
-                      <p>
-                        <b>Seamless App Center Integration</b> - Directly access
+                      </div>
+                      <div className="start-panel">
+                        <b>Seamless App Center Integration</b> Directly access
                         apps from App Center.
-                      </p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -154,6 +155,7 @@ const WhatIDoContentArea = () => {
           >
             <div className="de_2d-box">
               <div className="d-inner">
+                <div className="spacer-double"></div>
                 <div className="card-image-1">
                   <Image
                     src={mobileautomation}
@@ -230,11 +232,12 @@ const WhatIDoContentArea = () => {
           >
             <div className="de_2d-box">
               <div className="d-inner">
+                <div className="spacer-double"></div>
                 <div className="text">
                   I'll assist you with: <br />
                   <h2>Test planning, developing test strategies</h2>
                   <p>
-                    <b>Well-written tests require proper planning</b> - I
+                    <b>Well-written tests require proper planning</b> <br />I
                     specialize in comprehensive software testing planning for
                     both web and mobile software development
                   </p>
