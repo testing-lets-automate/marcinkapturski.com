@@ -182,6 +182,29 @@ const WhatIDoContentArea = () => {
           >
             <div className="de_2d-box">
               <div className="d-inner">
+                <div className="spacer-double"></div>
+                <div className="text">
+                  I'll assist you with: <br />
+                  <h2>Test planning, developing test strategies</h2>
+                  <p>
+                    <b>Well-written tests require proper planning</b> <br />I
+                    specialize in comprehensive software testing planning for
+                    both web and mobile software development
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="col-lg-4 text-left m-auto"
+            data-aos="fade"
+            data-aos-delay="400"
+            data-aos-duration="1000"
+            data-aos-easing="ease"
+            data-aos-once="true"
+          >
+            <div className="de_2d-box">
+              <div className="d-inner">
                 <div className="text">
                   <div className="d-inner">
                     <div className="spacer-double"></div>
@@ -218,29 +241,6 @@ const WhatIDoContentArea = () => {
                       </li>
                     </ul>
                   </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            className="col-lg-4 text-left m-auto"
-            data-aos="fade"
-            data-aos-delay="400"
-            data-aos-duration="1000"
-            data-aos-easing="ease"
-            data-aos-once="true"
-          >
-            <div className="de_2d-box">
-              <div className="d-inner">
-                <div className="spacer-double"></div>
-                <div className="text">
-                  I'll assist you with: <br />
-                  <h2>Test planning, developing test strategies</h2>
-                  <p>
-                    <b>Well-written tests require proper planning</b> <br />I
-                    specialize in comprehensive software testing planning for
-                    both web and mobile software development
-                  </p>
                 </div>
               </div>
             </div>
