@@ -45,11 +45,13 @@ const WhatIDoContentArea = () => {
                   <div className="d-inner">
                     <div className="spacer-double"></div>
                     <div className="card-image-1">
-                      <Image
-                        src={uiapiautomation}
-                        className={" "}
-                        alt={"gallery"}
-                      />
+                      <div class="image-container">
+                        <Image
+                          src={uiapiautomation}
+                          className={"responsive-image"}
+                          alt={"gallery"}
+                        />
+                      </div>
                     </div>
                     <div className="spacer-double"></div>
                   </div>

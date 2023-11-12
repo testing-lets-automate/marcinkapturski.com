@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
+import client from "../client.js";
 import { Helmet } from "react-helmet";
 import { useParams } from "react-router-dom";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { tomorrow } from "react-syntax-highlighter/dist/esm/styles/prism";
-import client from "../client.js";
 import Preloader from "components/organisms/Preloader/Preloader";
 import HeaderPost from "components/organisms/HeaderPost/HeaderPost";
 import Footer from "components/organisms/Footer/Footer";
@@ -38,11 +38,44 @@ const PostPage = () => {
 
   const renderContent = (content) => {
     return content.map((item, index) => {
-      if (item.type === "heading") {
+      if (item.level === 1) {
         return <h1 key={index}>{item.children[0].value}</h1>;
+      } else if (item.level === 2) {
+        return <h2 key={index}>{item.children[0].value}</h2>;
+      } else if (item.level === 3) {
+        return <h3 key={index}>{item.children[0].value}</h3>;
+      } else if (item.level === 6) {
+        const imageUrl = item.children[0].url;
+        const altText = item.children[0].children[0].value;
+
+        return <img key={index} src={imageUrl} alt={altText} />;
       } else if (item.type === "paragraph") {
-        return <p key={index}>{item.children[0].value}</p>;
-      } else if (item.type === "list") {
+        if (item.children.length === 1 && item.children[0].type === "link") {
+          const url = item.children[0].url;
+          const linkText = item.children[0].children[0].value;
+
+          return (
+            <a key={index} href={url}>
+              {linkText}
+            </a>
+          );
+        } else if (
+          item.children[0].type === "span" &&
+          item.children[0].value === ""
+        ) {
+          return <div className="spacer-single" key={index}></div>;
+        } else {
+          return <p key={index}>{item.children[0].value}</p>;
+        }
+      } else if (item.style === "numbered") {
+        return (
+          <ol key={index}>
+            {item.children.map((listItem, idx) => (
+              <li key={idx}>{renderContent(listItem.children)}</li>
+            ))}
+          </ol>
+        );
+      } else if (item.style === "bulleted") {
         return (
           <ul key={index}>
             {item.children.map((listItem, idx) => (
@@ -50,12 +83,8 @@ const PostPage = () => {
             ))}
           </ul>
         );
-      } else if (item.type === "listItem") {
-        return (
-          <ul key={index}>
-            <li>{renderContent(item.children)}</li>
-          </ul>
-        );
+      } else if (item.type === "span") {
+        return <b key={index}>{item.children[0].value}</b>;
       } else if (item.type === "code") {
         return (
           <SyntaxHighlighter
