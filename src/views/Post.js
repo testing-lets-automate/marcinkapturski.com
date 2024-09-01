@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import client from "../client.js";
 import { Helmet } from "react-helmet";
 import { useParams } from "react-router-dom";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { tomorrow } from "react-syntax-highlighter/dist/esm/styles/prism";
+
 import Preloader from "components/organisms/Preloader/Preloader";
 import HeaderPost from "components/organisms/HeaderPost/HeaderPost";
 import Footer from "components/organisms/Footer/Footer";
@@ -12,6 +12,7 @@ import ScrollToTop from "components/organisms/ScrollToTop/ScrollToTop";
 import HeadingPost from "components/atoms/HeadingPost/HeadingPost";
 import Text from "components/atoms/Text/Text";
 import { format } from "date-fns";
+import client from "../client.js";
 
 const PostPage = () => {
   const [post, setPost] = useState();

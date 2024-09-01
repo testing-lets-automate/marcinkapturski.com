@@ -2,7 +2,7 @@ import React from "react";
 import AOS from "aos";
 import { Helmet } from "react-helmet";
 import emailjs from "emailjs-com";
-import Image from "components/atoms/Image/Image";
+
 import Preloader from "components/organisms/Preloader/Preloader";
 import HeaderPost from "components/organisms/HeaderPost/HeaderPost";
 import Footer from "components/organisms/Footer/Footer";
@@ -22,10 +22,10 @@ const ContactPage = () => {
 
     emailjs
       .sendForm(
-        "service_aspqawq",
-        "template_31g0b3c",
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
         e.target,
-        "tfGmpkL9Lhkl-cmnY"
+        process.env.REACT_APP_EMAILJS_USER_ID
       )
       .then(
         (result) => {

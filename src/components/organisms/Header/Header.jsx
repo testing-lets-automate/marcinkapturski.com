@@ -38,7 +38,7 @@ const Header = function () {
               <NavigationItem name="Start" section="hero-area" />
               <NavigationItem name="About Me" section="aboutme" />
               <NavigationItem name="What I do" section="whatido" />
-              <NavigationItem name="Blog" section="blog" />
+              {/* <NavigationItem name="Blog" section="blog" /> */}
               <NavigationItem name="Contact" section="contact" />
             </ul>
             <button className="btn-main mt-3">
@@ -57,7 +57,7 @@ const Header = function () {
                 <NavigationItem name="Start" section="hero-area" />
                 <NavigationItem name="About Me" section="aboutme" />
                 <NavigationItem name="What I do" section="whatido" />
-                <NavigationItem name="Blog" section="blog" />
+                {/* <NavigationItem name="Blog" section="blog" /> */}
                 <NavigationItem name="Contact" section="contact" />
               </ul>
               <button className="btn-main mt-3">

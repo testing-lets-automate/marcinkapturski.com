@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
+
 import client from "../client.js";
 import Preloader from "components/organisms/Preloader/Preloader";
 import Header from "components/organisms/Header/Header";
@@ -58,7 +59,7 @@ function StartPage() {
               <Counter />
               <IconsSlider />
               <WhatIDoContentArea />
-              <Blog posts={posts} />
+              {/* <Blog posts={posts} /> */}
               <ContactContentArea />
               <Footer />
               <SocialIcons text="Follow Me" />

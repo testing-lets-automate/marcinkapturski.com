@@ -1,5 +1,6 @@
 import { GlobalStyles } from "styles/main";
 import { HashRouter, Route, Routes } from "react-router-dom";
+
 import StartPage from "views/Start";
 import PostPage from "views/Post";
 import ContactPage from "views/Contact";

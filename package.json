@@ -1,7 +1,7 @@
 {
   "homepage": "https://marcinkapturski.github.io",
   "name": "marcinkapturski.com",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "private": false,
   "scripts": {
     "predeploy": "npm run build",

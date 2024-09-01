@@ -19,10 +19,10 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "service_aspqawq",
-        "template_31g0b3c",
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
         e.target,
-        "tfGmpkL9Lhkl-cmnY"
+        process.env.REACT_APP_EMAILJS_USER_ID
       )
       .then(
         (result) => {
@@ -122,8 +122,8 @@ const Contact = () => {
                     <div className="wm-1"></div>
                     <h6>My e-mail</h6>
                     <p>
-                      <a href="mailto:contact@marcinkapturski.com">
-                        contact@marcinkapturski.com
+                      <a href="mailto:marcin@marcinkapturski.com">
+                        marcin@marcinkapturski.com
                       </a>
                     </p>
                   </div>
