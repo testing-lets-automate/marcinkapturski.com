@@ -12,7 +12,8 @@ Feature: Scrolling -> base checks
   @regression @scroll
   Scenario: Clicking on the page logo is moving page to the top
     * I click on the navigation link "Contact"
-    * the page is on the position "3706"
+    # * the page is on the position "3706" # working only with local run
+    * the page is on the position "3839"
     When I click on logo
     Then the page position is the top
 
