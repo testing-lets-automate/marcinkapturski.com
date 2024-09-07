@@ -15,6 +15,7 @@ const setupNodeEvents = async (on, config) => {
 };
 
 module.exports = defineConfig({
+  video: true,
   e2e: {
     setupNodeEvents,
     specPattern: "cypress/e2e/ui/*",

@@ -53,7 +53,7 @@ jobs:
           wait-on-timeout: 120
           browser: chrome
           spec: cypress/${{ matrix.spec }}
-          config-file: /${{ github.workspace }}/cypress/configs/cypress.localhost.config.js
+          config-file: /${{ github.workspace }}/configs/localhost.config.js
 
       - name: Run Tests on marcinkapturski.com
         if: ${{ github.event_name == 'schedule' || github.event.inputs.environment != 'localhost' && github.event_name != 'pull_request' }}
@@ -62,14 +62,7 @@ jobs:
           install: true
           browser: chrome
           spec: cypress/${{ matrix.spec }}
-          config-file: /${{ github.workspace }}/cypress/configs/cypress.marcinkapturski.config.js
-
-      - name: Cypress screenshots
-        uses: actions/upload-artifact@v1
-        if: failure()
-        with:
-          name: cypress-screenshots
-          path: ${{ github.workspace }}/cypress/screenshots
+          config-file: /${{ github.workspace }}/configs/marcinkapturski.config.js
 
       - name: Cypress videos
         uses: actions/upload-artifact@v1

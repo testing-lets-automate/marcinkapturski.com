@@ -15,6 +15,7 @@ const setupNodeEvents = async (on, config) => {
 };
 
 module.exports = defineConfig({
+  video: true,
   env: {
     home_page: "https://marcinkapturski.com",
   },
