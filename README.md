@@ -5,7 +5,7 @@
   </a>  
 </p>
 
-## Overview
+## 1. Overview
 
 <p align="center">   
     <img src="https://img.shields.io/badge/React-_-blue?logo=React" alt="React" style="vertical-align:top; margin:4px">
@@ -18,7 +18,7 @@
 This is my portfolio, blog and personal website.
 Written using JavaScript, built with React, tested by Cypress automation.
 
-To run Website Locally
+To run locally
 
 ```bash
 # install necessary packages
@@ -30,38 +30,40 @@ yarn start
 
 Open http://localhost:3000 with your browser to see the result
 
-## Cypress automation tests
+## 2. Cypress UI tests for this project
 
-```bash
-# install necessary packages
-yarn
+This project is tested by Cypress UI automation
 
-# run cypress tests
-yarn cy:run
-```
+2.1. Open workflow and dispatch tests: [cy-automation-tests](https://github.com/marcinkapturski/marcinkapturski.com/actions/workflows/cy-automation-tests.yml)
 
-## Tests structure and Gherkin language
+![2024-09-07_13h59_44](https://github.com/user-attachments/assets/27da54b7-3a4f-4e35-a452-3186e0419162)
+
+2.2. Check the results by opening test run details
+
+![2024-09-07_13h54_05](https://github.com/user-attachments/assets/b7a24d1f-d827-448e-a812-2a8c7a16c119)
+
+
+## 3.Tests structure and Gherkin language
 
 Under path: `/cypress/e2e` are all automation tests written in Gherkin language
 
 Example:
 
 ```gherkin
-Feature: Navigation links are visible and performing actions
+Feature: Navigation -> base checks
 
-  Background:
-    Given I open the "home_page"
-    And The title includes "About automation tests in Software Development"
+    Background:
+        * I open the start page
 
-  @regression
-  Scenario Outline: Navigation item "<navigation_item>" scrolled to its assigned section
-    When I click on the navigation link "<navigation_item>"
-    Then The page is on the position "<position>"
+    @regression @navigation
+    Scenario Outline: Navigation item "<navigation_item>" scrolled to its assigned section
+        When I click on the navigation link "<navigation_item>"
+        Then the page is on the position "<position>"
 
-    Examples:
-      | navigation_item | position |
-      | What I Do       | 10       |
-      | About me        | 18       |
-      | Cooperation     | 11       |
-      | Contact         | 16       |
+        Examples:
+            | navigation_item | position |
+            | Start           | 0        |
+            | About me        | 723      |
+            | What I do       | 1543     |
+            | Contact         | 3839     |
 ```
