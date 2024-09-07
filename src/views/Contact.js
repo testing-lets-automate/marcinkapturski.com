@@ -209,7 +209,7 @@ const ContactPage = () => {
             </div>
           </div>
           <Footer />
-          <SocialIcons text="Follow Me" />
+          <SocialIcons text="GitHub" />
         </div>
         <ScrollToTop />
       </>
