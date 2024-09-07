@@ -11,8 +11,8 @@
     "build-localhost": "PUBLIC_URL=/ react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "cy:local:open": "npx cypress open --config-file configs/cypress.localhost.config.js --browser chrome",
-    "cy:local:run": "npx cypress run --config-file configs/cypress.localhost.config.js --browser chrome",
+    "cy:local:open": "npx cypress open --config-file configs/localhost.config.js --browser chrome",
+    "cy:local:run": "npx cypress run --config-file configs/localhost.config.js --browser chrome",
     "cypress:execution-tags": "cypress run --e2e --browser chrome --spec **/*.feature --env tags=@regression"
   },
   "eslintConfig": {

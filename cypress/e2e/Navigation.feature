@@ -16,7 +16,7 @@ Feature: Navigation -> base checks
             | navigation_item | position |
             | Start           | 0        |
             | About me        | 723      |
-            | What I do       | 1497     |
+            | What I do       | 1543     |
             | Contact         | 3839     |
 
 #working only with local run
