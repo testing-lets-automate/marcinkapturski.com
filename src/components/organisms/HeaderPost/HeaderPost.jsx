@@ -7,8 +7,8 @@ const Header = function () {
   const [showmenu, btn_icon] = useState(false);
   useEffect(() => {
     const header = document.getElementById("header-wrap");
-    const flytext = document.getElementById("fly");
-    const totop = document.getElementById("scroll-to-top");
+    // const flytext = document.getElementById("fly");
+    // const totop = document.getElementById("scroll-to-top");
     const sticky = header.offsetTop;
     const scrollCallBack = window.addEventListener("scroll", () => {
       btn_icon(false);

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Burgermenu from "components/atoms/Buttons/Burgermenu/Burgermenu";
 import Logo from "components/molecules/Logo/Logo";
-import Typed from "react-typed";
-import { Link } from "react-scroll";
+// import Typed from "react-typed";
+// import { Link } from "react-scroll";
 import NavigationItem from "components/molecules/NavigationItem/NavigationItem";
 
 const Header = function () {
@@ -41,7 +41,7 @@ const Header = function () {
               {/* <NavigationItem name="Blog" section="blog" /> */}
               <NavigationItem name="Contact" section="contact" />
             </ul>
-            <button className="btn-main mt-3">
+            {/* <button className="btn-main mt-3">
               <a href="#/contact">
                 <Typed
                   strings={["Get Free Consultation"]}
@@ -49,7 +49,7 @@ const Header = function () {
                   className="hero-button"
                 />
               </a>
-            </button>
+            </button> */}
           </div>
           {showmenu && (
             <div className="mobilemenu">
@@ -60,7 +60,7 @@ const Header = function () {
                 {/* <NavigationItem name="Blog" section="blog" /> */}
                 <NavigationItem name="Contact" section="contact" />
               </ul>
-              <button className="btn-main mt-3">
+              {/* <button className="btn-main mt-3">
                 <a href="#/contact">
                   <Typed
                     strings={["Get Free Consultation"]}
@@ -68,7 +68,7 @@ const Header = function () {
                     className="hero-button"
                   />
                 </a>
-              </button>
+              </button> */}
             </div>
           )}
           <Burgermenu btn_icon={btn_icon} showmenu={showmenu} />

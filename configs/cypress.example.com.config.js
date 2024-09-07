@@ -16,8 +16,7 @@ const setupNodeEvents = async (on, config) => {
 
 module.exports = defineConfig({
   env: {
-    // home_page: "https://marcinkapturski.com",
-    home_page: "http://localhost:3000",
+    home_page: "https://marcinkapturski.com",
   },
   viewportWidth: 1920,
   viewportHeight: 1080,
@@ -27,9 +26,8 @@ module.exports = defineConfig({
   e2e: {
     hideXHRInCommandLog: true,
     setupNodeEvents,
-    specPattern: "cypress/e2e/**/*.feature",
-    // baseUrl: "https://marcinkapturski.com",
-    baseUrl: "http://localhost:3000",
+    specPattern: "cypress/e2e/*.feature",
+    baseUrl: "https://marcinkapturski.com",
     excludeSpecPattern: ["*.js"],
   },
 });

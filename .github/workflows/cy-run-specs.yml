@@ -62,7 +62,7 @@ jobs:
           install: true
           browser: chrome
           spec: cypress/${{ matrix.spec }}
-          config-file: /${{ github.workspace }}/cypress/configs/cypress.marcinkapturski.com.config.js
+          config-file: /${{ github.workspace }}/cypress/configs/cypress.marcinkapturski.config.js
 
       - name: Cypress screenshots
         uses: actions/upload-artifact@v1

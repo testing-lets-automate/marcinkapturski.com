@@ -11,8 +11,8 @@
     "build-localhost": "PUBLIC_URL=/ react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "cy:run": "cypress run --e2e --browser chrome --spec **/*.feature",
-    "cy:open": "cypress open --e2e --browser chrome",
+    "cy:local:open": "npx cypress open --config-file configs/cypress.localhost.config.js --browser chrome",
+    "cy:local:run": "npx cypress run --config-file configs/cypress.localhost.config.js --browser chrome",
     "cypress:execution-tags": "cypress run --e2e --browser chrome --spec **/*.feature --env tags=@regression"
   },
   "eslintConfig": {
@@ -37,13 +37,13 @@
       "cucumber"
     ]
   },
-  "author": "Marcin Kapturski <mkapturski@gmail.com>",
+  "author": "Marcin Kapturski <marcin@marcinkapturski.com>",
   "dependencies": {
     "@apideck/better-ajv-errors": "^0.3.6",
     "@popperjs/core": "^2.11.5",
     "aos": "^3.0.0-beta.6",
     "autoprefixer": "^10.4.5",
-    "axios": "^1.2.3",
+    "axios": "^1.7.2",
     "bootstrap": "^5.1.1",
     "d3-ease": "^3.0.1",
     "date-fns": "^2.30.0",
@@ -54,6 +54,8 @@
     "graphql": "^16.7.1",
     "graphql-request": "^6.1.0",
     "isomorphic-fetch": "^3.0.0",
+    "node-polyfill-webpack-plugin": "^4.0.0",
+    "os-browserify": "^0.3.0",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-circular-progressbar": "^2.1.0",
@@ -88,7 +90,9 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^14.4.3",
-    "cypress": "^12.3.0",
+    "cypress": "13.9.0",
+    "cypress-mochawesome-reporter": "^3.5.1",
+    "cypress-tags": "^1.1.2",
     "gh-pages": "^4.0.0",
     "path": "^0.12.7"
   },
