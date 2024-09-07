@@ -45,19 +45,14 @@ const IconsSlider = function () {
                 <div className="skill-pix">GIT</div>
                 <div className="skill-pix">GitHub Actions</div>
                 <div className="skill-pix">GitLab</div>
-                <div className="skill-pix">SauceLabs</div>
                 <div className="skill-pix">Jenkins</div>
                 <div className="skill-pix">Postman</div>
                 <div className="skill-pix">SoupUI</div>
-                <div className="skill-pix">Agile Scrum</div>
-                <div className="skill-pix">Jira</div>
-                <div className="skill-pix">TFS</div>
                 <div className="skill-pix">Grafana</div>
-                <div className="skill-pix">Gatling</div>
                 <div className="skill-pix">App Center</div>
                 <div className="skill-pix">Linux</div>
                 <div className="skill-pix">Salesforce</div>
-                <div className="skill-pix">MS Dynamics</div>
+                <div className="skill-pix">MS Dynamics 365</div>
               </div>
             </div>
           </div>

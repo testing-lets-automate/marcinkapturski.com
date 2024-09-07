@@ -15,19 +15,17 @@ const setupNodeEvents = async (on, config) => {
 };
 
 module.exports = defineConfig({
-  env: {
-    home_page: "http://localhost:3000",
-  },
-  viewportWidth: 1920,
-  viewportHeight: 1080,
-  defaultCommandTimeout: 5000,
-  chromeWebSecurity: false,
-  fixturesFolder: false,
   e2e: {
-    hideXHRInCommandLog: true,
     setupNodeEvents,
+    specPattern: "cypress/e2e/ui/*",
+    hideXHRInCommandLog: true,
     specPattern: "**/*.feature",
     baseUrl: "http://localhost:3000",
     excludeSpecPattern: ["*.js"],
+    viewportWidth: 1920,
+    viewportHeight: 1080,
+    defaultCommandTimeout: 5000,
+    chromeWebSecurity: false,
+    fixturesFolder: false,
   },
 });

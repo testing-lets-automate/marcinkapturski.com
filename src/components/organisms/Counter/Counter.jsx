@@ -13,31 +13,7 @@ const Counter = () => {
           <div className="py-5 position-relative">
             <div className="container">
               <div className="row">
-                <div className="col-md-3">
-                  <div className="de_count text-center">
-                    <h3
-                      className="timer"
-                      data-aos="fade"
-                      data-aos-delay="0"
-                      data-aos-duration="1000"
-                      data-aos-easing="ease"
-                      data-aos-once="true"
-                    >
-                      <CountUp
-                        start={0}
-                        end={19}
-                        duration={10}
-                        useEasing={true}
-                        separator=","
-                      />
-                    </h3>
-                    <span>
-                      <b>years of profesional experience</b>
-                    </span>
-                  </div>
-                </div>
-
-                <div className="col-md-3">
+                <div className="col-md-4">
                   <div className="de_count text-center">
                     <h3
                       className="timer"
@@ -61,7 +37,7 @@ const Counter = () => {
                   </div>
                 </div>
 
-                <div className="col-md-3">
+                <div className="col-md-4">
                   <div className="de_count text-center">
                     <h3
                       className="timer"
@@ -80,31 +56,31 @@ const Counter = () => {
                       />
                     </h3>
                     <span>
-                      <b>worldwide clients</b>
+                      <b>Industries served</b>
                     </span>
                   </div>
                 </div>
 
-                <div className="col-md-3">
+                <div className="col-md-4">
                   <div className="de_count text-center">
                     <h3
                       className="timer"
                       data-aos="fade"
-                      data-aos-delay="600"
+                      data-aos-delay="0"
                       data-aos-duration="1000"
                       data-aos-easing="ease"
                       data-aos-once="true"
                     >
                       <CountUp
                         start={0}
-                        end={640}
-                        duration={7}
+                        end={5}
+                        duration={10}
                         useEasing={true}
                         separator=","
                       />
                     </h3>
                     <span>
-                      <b>automation tests from this year</b>
+                      <b>countries with client collaborations</b>
                     </span>
                   </div>
                 </div>
