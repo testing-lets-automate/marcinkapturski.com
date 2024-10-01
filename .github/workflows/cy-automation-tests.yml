@@ -13,7 +13,7 @@ on:
         options:
           - localhost
           - marcinkapturski.com
-        default: "localhost"
+        default: "marcinkapturski.com"
 
 jobs:
   list-specs:
